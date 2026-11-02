@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { postUrl } from '../lib/postPaths';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+  siteOrigin: string;
+}
+
+const { post, siteOrigin } = Astro.props;
+const shareUrl = new URL(postUrl(post), siteOrigin).href;
+const shareTitle = post.data.title;
+---
+
+<div class="share-bar" aria-label="Share this article">
+  <span class="share-bar__label">Share</span>
+  <button type="button" class="share-bar__button" data-copy-link={shareUrl}>
+    Copy link
+  </button>
+  <a
+    class="share-bar__button"
+    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`}
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Post on X
+  </a>
+</div>
+
+<script>
+  document.querySelectorAll('[data-copy-link]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const url = button.getAttribute('data-copy-link');
+      if (!url) return;
+      try {
+        await navigator.clipboard.writeText(url);
+        const original = button.textContent;
+        button.textContent = 'Link copied';
+        setTimeout(() => {
+          button.textContent = original;
+        }, 2000);
+      } catch {
+        button.textContent = 'Copy failed';
+      }
+    });
+  });
+</script>

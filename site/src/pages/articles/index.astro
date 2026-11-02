@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Pagination from '../../components/Pagination.astro';
+import StoryCard from '../../components/StoryCard.astro';
+import { sortPostsNewestFirst } from '../../lib/posts';
+import { archivePageUrl, paginate } from '../../lib/pagination';
+
+const posts = sortPostsNewestFirst(await getCollection('posts'));
+const { items, currentPage, totalPages } = paginate(posts, 1);
+---
+
+<BaseLayout
+  title="Article archive"
+  description="Browse the full Inventive Africa article archive."
+  mainClass="archive-page"
+>
+  <header class="page-header">
+    <h1>Article archive</h1>
+    <p class="lede">{posts.length} published articles from the migrated WordPress export.</p>
+  </header>
+  <div class="archive-list">
+    {items.map((post) => (
+      <StoryCard post={post} variant="list" headingLevel="h2" />
+    ))}
+  </div>
+  <Pagination
+    currentPage={currentPage}
+    totalPages={totalPages}
+    makeHref={archivePageUrl}
+    label="Article archive pages"
+  />
+</BaseLayout>

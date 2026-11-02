@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getMonthArchiveIndex } from '../../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  const years = new Set(posts.map((post) => post.data.pubDate.getUTCFullYear()));
+  return [...years].map((year) => ({ params: { year: String(year) } }));
+}
+
+const year = Number(Astro.params.year);
+const posts = await getCollection('posts');
+const months = getMonthArchiveIndex(posts, year);
+const monthFormatter = new Intl.DateTimeFormat('en-GB', { month: 'long', timeZone: 'UTC' });
+---
+
+<BaseLayout title={`Archive ${year}`} description={`Articles published in ${year}.`} mainClass="archive-index">
+  <header class="page-header">
+    <p class="eyebrow"><a href="/archive/">Archive</a></p>
+    <h1>{year}</h1>
+    <p class="lede">Choose a month to browse published stories.</p>
+  </header>
+  <ul class="year-list">
+    {
+      months.map(([month, count]) => (
+        <li>
+          <a href={`/archive/${year}/${String(month).padStart(2, '0')}/`}>
+            <span>{monthFormatter.format(new Date(Date.UTC(year, month - 1, 1)))}</span>
+            <span class="year-list__count">{count} articles</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

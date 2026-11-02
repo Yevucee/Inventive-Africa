@@ -20,3 +20,17 @@ export function formatDate(date: Date) {
     timeZone: 'UTC',
   }).format(date);
 }
+
+export function formatDateShort(date: Date) {
+  return new Intl.DateTimeFormat('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(date);
+}
+
+export function absolutePostUrl(site: URL | string, entry: CollectionEntry<'posts'>) {
+  const base = typeof site === 'string' ? site : site.origin;
+  return new URL(postUrl(entry), base).href;
+}

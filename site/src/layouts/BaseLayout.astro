@@ -1,43 +1,56 @@
 ---
 import '../styles/global.css';
-import type { Props as AstroProps } from 'astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { getCategoryIndex } from '../lib/posts';
+import { getCollection } from 'astro:content';
 
 interface Props {
   title?: string;
   description?: string;
+  ogImage?: string;
+  mainClass?: string;
+  canonicalUrl?: string;
 }
 
-const { title = 'Inventive Africa', description = 'Change is happening now' } =
-  Astro.props as Props;
+const {
+  title = 'Inventive Africa',
+  description = 'Change is happening now — African innovation, technology, and inspiration.',
+  ogImage,
+  mainClass = '',
+  canonicalUrl,
+} = Astro.props;
+
+const posts = await getCollection('posts');
+const topics = getCategoryIndex(posts);
+const pageTitle = title === 'Inventive Africa' ? title : `${title} · Inventive Africa`;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
+    <link rel="alternate" type="application/rss+xml" title="Inventive Africa" href="/rss.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    {ogImage ? <meta property="og:image" content={ogImage} /> : null}
+    {canonicalUrl ? <link rel="canonical" href={canonicalUrl} /> : null}
+    <title>{pageTitle}</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="wrap">
-        <a class="brand" href="/">Inventive Africa</a>
-        <nav aria-label="Primary">
-          <ul>
-            <li><a href="/">Articles</a></li>
-            <li><a href="/about/">About</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main id="main" class="wrap">
+    <SiteHeader topics={topics} />
+    <main id="main" class:list={['site-main', 'wrap', mainClass]}>
       <slot />
     </main>
-    <footer class="site-footer wrap">
-      <p>Preview build — WordPress remains the live site until launch is approved.</p>
-    </footer>
+    <SiteFooter />
   </body>
 </html>

@@ -1,33 +1,90 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { formatDate, postUrl } from '../lib/postPaths';
+import Pagination from '../components/Pagination.astro';
+import StoryCard from '../components/StoryCard.astro';
+import {
+  HOMEPAGE_RECENT_COUNT,
+  HOMEPAGE_SECONDARY_FEATURED,
+  hasFeaturedImage,
+  sortPostsNewestFirst,
+  getCategoryIndex,
+} from '../lib/posts';
+import { categorySlug } from '../lib/taxonomy';
 
-const posts = (await getCollection('posts')).sort(
-  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
-);
+const allPosts = sortPostsNewestFirst(await getCollection('posts'));
+const hero = allPosts.find((post) => hasFeaturedImage(post)) ?? allPosts[0];
+const secondaryPool = allPosts.filter((post) => post.id !== hero?.id && hasFeaturedImage(post));
+const secondaryFeatured = secondaryPool.slice(0, HOMEPAGE_SECONDARY_FEATURED);
+const secondaryIds = new Set(secondaryFeatured.map((p) => p.id));
+const recent = allPosts
+  .filter((post) => post.id !== hero?.id && !secondaryIds.has(post.id))
+  .slice(0, HOMEPAGE_RECENT_COUNT);
+
+const topics = getCategoryIndex(allPosts).filter((topic) => topic.label !== 'Uncategorized');
+const spotlightTopics = topics.slice(0, 4);
 ---
 
 <BaseLayout
-  title="Inventive Africa — Articles"
-  description="African innovation, technology, and inspiration."
+  title="Inventive Africa"
+  description="African innovation, technology, and inspiration — change is happening now."
+  mainClass="home-page"
 >
-  <h1>Inventive Africa</h1>
-  <p class="lede">Change is happening now. This preview site mirrors WordPress URL patterns for migrated articles.</p>
-  <ul class="post-list">
+  <section class="home-hero" aria-labelledby="hero-heading">
     {
-      posts.map((post) => (
-        <li>
-          <a href={postUrl(post)}>
-            <p class="meta">
-              <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
-              · {post.data.author}
-            </p>
-            <h2>{post.data.title}</h2>
-            {post.data.description ? <p>{post.data.description}</p> : null}
-          </a>
-        </li>
-      ))
+      hero ? (
+        <StoryCard post={hero} variant="hero" headingLevel="h1" />
+      ) : (
+        <h1 id="hero-heading">Inventive Africa</h1>
+      )
     }
-  </ul>
+  </section>
+
+  {
+    secondaryFeatured.length ? (
+      <section class="home-section" aria-labelledby="featured-heading">
+        <div class="section-heading">
+          <h2 id="featured-heading">Featured stories</h2>
+        </div>
+        <div class="home-feature-grid">
+          {secondaryFeatured.map((post) => (
+            <StoryCard post={post} variant="feature" headingLevel="h3" />
+          ))}
+        </div>
+      </section>
+    ) : null
+  }
+
+  {
+    spotlightTopics.length ? (
+      <section class="home-section home-topics" aria-labelledby="topics-heading">
+        <div class="section-heading">
+          <h2 id="topics-heading">Explore topics</h2>
+          <a class="section-heading__more" href="/topics/">All topics</a>
+        </div>
+        <ul class="topic-grid">
+          {spotlightTopics.map((topic) => (
+            <li>
+              <a class="topic-card" href={`/topic/${topic.slug}/`}>
+                <span class="topic-card__label">{topic.label}</span>
+                <span class="topic-card__count">{topic.count} stories</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ) : null
+  }
+
+  <section class="home-section" aria-labelledby="recent-heading">
+    <div class="section-heading">
+      <h2 id="recent-heading">Recent articles</h2>
+      <a class="section-heading__more" href="/articles/">Full archive</a>
+    </div>
+    <div class="home-recent-list">
+      {recent.map((post) => (
+        <StoryCard post={post} variant="list" headingLevel="h3" />
+      ))}
+    </div>
+  </section>
 </BaseLayout>

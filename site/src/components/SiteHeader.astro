@@ -1,0 +1,79 @@
+---
+import { TOPIC_NAV_LIMIT } from '../lib/taxonomy';
+
+interface Props {
+  topics: { label: string; slug: string; count: number }[];
+}
+
+const { topics } = Astro.props;
+const navTopics = topics.filter((t) => t.label !== 'Uncategorized').slice(0, TOPIC_NAV_LIMIT);
+---
+
+<header class="site-header">
+  <div class="site-header__inner wrap">
+    <div class="site-header__brand-row">
+      <a class="masthead" href="/">
+        <span class="masthead__title">Inventive Africa</span>
+        <span class="masthead__tagline">Change is happening now</span>
+      </a>
+      <div class="site-header__utilities">
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle dark theme"
+          aria-pressed="false"
+        >
+          Theme
+        </button>
+        <a class="site-header__search" href="/search/">Search</a>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <ul class="site-nav__list">
+        <li><a href="/">Front page</a></li>
+        <li><a href="/articles/">Archive</a></li>
+        <li><a href="/archive/">By date</a></li>
+        <li><a href="/topics/">Topics</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+      {
+        navTopics.length ? (
+          <ul class="site-nav__topics" aria-label="Featured topics">
+            {navTopics.map((topic) => (
+              <li>
+                <a href={`/topic/${topic.slug}/`}>{topic.label}</a>
+              </li>
+            ))}
+          </ul>
+        ) : null
+      }
+    </nav>
+  </div>
+</header>
+
+<script>
+  const storageKey = 'inventive-africa-theme';
+  const root = document.documentElement;
+  const toggle = document.getElementById('theme-toggle');
+
+  function applyTheme(theme: 'light' | 'dark') {
+    root.dataset.theme = theme;
+    toggle?.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+  }
+
+  const stored = localStorage.getItem(storageKey);
+  if (stored === 'light' || stored === 'dark') {
+    applyTheme(stored);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark');
+  } else {
+    applyTheme('light');
+  }
+
+  toggle?.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem(storageKey, next);
+  });
+</script>

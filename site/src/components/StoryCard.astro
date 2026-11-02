@@ -1,0 +1,51 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { displayAuthor, featuredImageSrc } from '../lib/posts';
+import { formatDateShort, postUrl } from '../lib/postPaths';
+import { categorySlug } from '../lib/taxonomy';
+import MediaImage from './MediaImage.astro';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+  variant?: 'hero' | 'feature' | 'compact' | 'list';
+  headingLevel?: 'h2' | 'h3';
+  hideImage?: boolean;
+}
+
+const { post, variant = 'list', headingLevel = 'h2', hideImage = false } = Astro.props;
+const Tag = headingLevel;
+const image = featuredImageSrc(post);
+const showImage = !hideImage && image;
+---
+
+<article class:list={['story-card', `story-card--${variant}`]}>
+  {
+    showImage ? (
+      <a class="story-card__media" href={postUrl(post)} tabindex="-1" aria-hidden="true">
+        <MediaImage src={image!} alt={post.data.featuredImageAlt || post.data.title} priority={variant === 'hero'} />
+      </a>
+    ) : null
+  }
+  <div class="story-card__body">
+    {
+      post.data.categories.length ? (
+        <p class="story-card__topics">
+          {post.data.categories.slice(0, 2).map((category) => (
+            <a class="topic-pill" href={`/topic/${categorySlug(category)}/`}>
+              {category}
+            </a>
+          ))}
+        </p>
+      ) : null
+    }
+    <Tag class="story-card__title">
+      <a href={postUrl(post)}>{post.data.title}</a>
+    </Tag>
+    {post.data.description ? <p class="story-card__dek">{post.data.description}</p> : null}
+    <p class="story-card__meta">
+      <time datetime={post.data.pubDate.toISOString()}>{formatDateShort(post.data.pubDate)}</time>
+      <span aria-hidden="true">·</span>
+      <span>{displayAuthor(post.data.author)}</span>
+    </p>
+  </div>
+</article>

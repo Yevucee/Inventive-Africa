@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCategoryIndex } from '../../lib/posts';
+
+const posts = await getCollection('posts');
+const topics = getCategoryIndex(posts);
+---
+
+<BaseLayout title="Topics" description="Browse Inventive Africa stories by topic." mainClass="topics-page">
+  <header class="page-header">
+    <h1>Topics</h1>
+    <p class="lede">Categories from the WordPress export, preserved without inventing new groupings.</p>
+  </header>
+  <ul class="topic-directory">
+    {
+      topics.map((topic) => (
+        <li>
+          <a href={`/topic/${topic.slug}/`}>
+            <span>{topic.label}</span>
+            <span class="topic-directory__count">{topic.count}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

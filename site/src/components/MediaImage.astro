@@ -1,0 +1,43 @@
+---
+import { normalizeUploadSrc, uploadFileExists } from '../lib/media';
+
+interface Props {
+  src: string;
+  alt?: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  sizes?: string;
+  widths?: number[];
+  priority?: boolean;
+}
+
+const {
+  src,
+  alt = '',
+  class: className = '',
+  loading = 'lazy',
+  sizes = '(min-width: 960px) 960px, 100vw',
+  priority = false,
+} = Astro.props;
+
+const normalized = normalizeUploadSrc(src);
+const fileMissing = normalized.startsWith('/wp-content/uploads/') && !uploadFileExists(normalized);
+const loadMode = priority ? 'eager' : loading;
+---
+
+{
+  fileMissing ? (
+    <figure class:list={['media-frame', 'media-frame--missing', className]}>
+      <div class="media-frame__placeholder" role="img" aria-label={alt || 'Image unavailable in archive'}>
+        <span class="media-frame__placeholder-label">Image unavailable</span>
+        <span class="media-frame__placeholder-detail">This asset was not included in the migrated media archive.</span>
+      </div>
+      {alt ? <figcaption>{alt}</figcaption> : null}
+    </figure>
+  ) : (
+    <figure class:list={['media-frame', className]}>
+      <img src={normalized} alt={alt} loading={loadMode} decoding="async" sizes={sizes} width="1200" height="675" />
+      {alt ? <figcaption>{alt}</figcaption> : null}
+    </figure>
+  )
+}
