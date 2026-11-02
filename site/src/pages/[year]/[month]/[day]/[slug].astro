@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleLayout from '../../../../layouts/ArticleLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((entry) => {
+    const d = entry.data.pubDate;
+    return {
+      params: {
+        year: String(d.getUTCFullYear()),
+        month: String(d.getUTCMonth() + 1).padStart(2, '0'),
+        day: String(d.getUTCDate()).padStart(2, '0'),
+        slug: entry.data.slug,
+      },
+      props: { entry },
+    };
+  });
+}
+
+const { entry } = Astro.props;
+---
+
+<ArticleLayout entry={entry} />

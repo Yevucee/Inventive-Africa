@@ -1,0 +1,21 @@
+---
+title: "DidYouKnow you should apply for the Innovation Prize for Africa?"
+description: "It seems like only yesterday that the Innovation Prize for Africa announced its 2016 winners . Yet, the time has come for potential innovators to apply for the "
+pubDate: 2016-10-05T15:47:27.000Z
+updatedDate: 2016-10-14T05:08:14.000Z
+author: "inventiveafrica"
+slug: "innovation-prize-for-africa-is-open-for-applicants"
+wpId: "3413"
+legacyUrl: "http://inventiveafrica.com/2016/10/05/innovation-prize-for-africa-is-open-for-applicants/"
+legacyPath: "/2016/10/05/innovation-prize-for-africa-is-open-for-applicants/"
+type: "post"
+categories: ["Digitalisation", "Events", "Projects"]
+tags: ["africa", "development", "Innovation", "internet", "technology"]
+featuredImage: "/wp-content/uploads/2016/10/ipa2017.png"
+featuredImageAlt: ""
+---
+It seems like only yesterday that the [Innovation Prize for Africa](http://innovationprizeforafrica.org/) [announced its 2016 winners](/2016/07/19/did-you-know-that-africa-is-the-home-of-innovation/). Yet, the time has come for potential innovators to apply for the 2017 addition. Applicants can apply until the 3rd of January 2017 for the 6th edition of the prize. ![innovationprize](/wp-content/uploads/2016/10/innovationprize.png)This time around the prize will be held in Morocco and will offer a share of $150,000 to the winners. The theme for the #IPA2017 is African Innovation: Investing in Prosperity, which is inline with the [United Nations Sustainable Development (SDG) Goal N0.9](https://sustainabledevelopment.un.org/sdg9), which requires countries to build resilient infrastructure, promote inclusive and sustainable industrialisation and foster innovation.
+
+> Walter Fust, Chairman of the AIF Board states: “IPA has demonstrated that African innovation talent is abundant, but funding and resources remain a challenge.  For IPA 2017, we are expanding our outreach beyond innovators to include investors and other key movers and shakers across the innovation landscape to help address this challenge.  To meet this objective of increasing support to individual innovators, makers, training institutions, existing hubs and networks, the IPA will offer sponsorship opportunities to investors and other innovation enablers who can demonstrate their commitment to support the building of more robust African innovation ecosystems.”
+
+The IPA embodies this SDG by promoting innovation across the African continent. The last instalment of the prize had over 1000 applicants and the winners came from variety of areas, such as agriculture, anti malaria solutions and sustainable energy. It will be exciting to see the shortlisted nominees for the 2017 edition of the prize. ![ipa2017](/wp-content/uploads/2016/10/ipa2017.png) To apply for competitions such as the IPA, is not just about the potential monetary prize. The potential publicity to an innovation through such events is worth more than the money. Investors all over the world are looking to these prizes to find their next investment. Huge companies like Facebook are already scouring Africa for the next big technology innovation, and events like this are the best place to showcase them. The 10 nominees will be features at the IPA 2017 event and will receive support in their future endeavours, with funding, communications training, access to the IPA network and of course worldwide publicity. Do you intend on applying for the IPA 2017? If so, here is the link to do so! [https://ipa.africaninnovation.org/s/login/](https://ipa.africaninnovation.org/s/login/) . And why not let us know you are applying so we can feature your innovation on Inventive Africa. Please **share** the blog on **[Twitter](https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&ref_src=twsrc%5Etfw&related=wordpressdotcom&text=Did%20You%20Know%20tech%20can%20unburden%20African%20girls%20at%20home%3F&tw_p=tweetbutton&url=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&via=InventiveAfrica)** **and** **[Facebook](https://www.facebook.com/sharer/sharer.php?app_id=249643311490&sdk=joey&u=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&display=popup&ref=plugin&src=share_button).**    ,

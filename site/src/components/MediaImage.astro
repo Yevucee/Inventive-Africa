@@ -1,0 +1,55 @@
+---
+import { normalizeUploadSrc, uploadFileExists } from '../lib/media';
+import { hrefPath } from '../lib/postPaths';
+
+interface Props {
+  src: string;
+  alt?: string;
+  class?: string;
+  loading?: 'lazy' | 'eager';
+  sizes?: string;
+  priority?: boolean;
+  fit?: 'cover' | 'contain';
+  caption?: string;
+}
+
+const {
+  src,
+  alt = '',
+  class: className = '',
+  loading = 'lazy',
+  sizes = '(min-width: 960px) 960px, 100vw',
+  priority = false,
+  fit = 'cover',
+  caption,
+} = Astro.props;
+
+const normalized = normalizeUploadSrc(src);
+const fileMissing = normalized.startsWith('/wp-content/uploads/') && !uploadFileExists(normalized);
+const loadMode = priority ? 'eager' : loading;
+const showCaption = Boolean(caption?.trim());
+---
+
+{
+  fileMissing ? (
+    <figure class:list={['media-frame', 'media-frame--missing', className]}>
+      <div class="media-frame__placeholder" role="img" aria-label={alt || 'Image unavailable in archive'}>
+        <span class="media-frame__placeholder-label">Image unavailable</span>
+        <span class="media-frame__placeholder-detail">This asset was not included in the migrated media archive.</span>
+      </div>
+      {showCaption ? <figcaption>{caption}</figcaption> : null}
+    </figure>
+  ) : (
+    <figure class:list={['media-frame', `media-frame--${fit}`, className]}>
+      <img
+        src={hrefPath(normalized)}
+        alt={alt}
+        loading={loadMode}
+        decoding="async"
+        sizes={sizes}
+        class={`media-frame__img media-frame__img--${fit}`}
+      />
+      {showCaption ? <figcaption>{caption}</figcaption> : null}
+    </figure>
+  )
+}

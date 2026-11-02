@@ -1,0 +1,19 @@
+---
+title: "Did You Know How Online-Censorship Affects Innovation?"
+description: "In October, freedomhouse.org published the annual Freedom on the Net-Report - A study designed to measure the freedom on the internet in 65 countries. Over the "
+pubDate: 2015-12-01T15:36:49.000Z
+updatedDate: 2016-08-05T00:43:49.000Z
+author: "inventiveafrica"
+slug: "did-you-know-how-online-censorship-affects-innovation"
+wpId: "51"
+legacyUrl: "http://inventiveafrica.com/2015/12/01/did-you-know-how-online-censorship-affects-innovation/"
+legacyPath: "/2015/12/01/did-you-know-how-online-censorship-affects-innovation/"
+type: "post"
+categories: ["Uncategorized"]
+tags: ["africa", "censorship", "corruption", "freedom", "Innovation", "internet"]
+---
+In October, [freedomhouse.org](https://freedomhouse.org) published the annual Freedom on the Net-Report - A study designed to measure the freedom on the internet in 65 countries. Over the weekend, I had a look at the 2015 report. This made me think about how censorship potentially affects innovation and left me wondering what can be done about it. Apparently, one of the big issues concerning freedom of the internet in African countries is the heavy censorship by some authorities and governments. Censorship entails the blocking or takedown of relevant websites as well as detaining users who post certain types of content on the internet. According to the report, in all countries in North Africa and in nearly all countries in sub-Saharan Africa criticism of authorities is subject to heavy censorship. Furthermore, topics such as _Corruption, Political Opposition_ or _Confict_ are heavily censored in many North- and Sub-Saharan African Countries. All in all, only two Sub-Saharan African countries, South Africa and Kenya, qualify as free. While most of the other Sub-Saharan African countries, namely Angola, Nigeria and Uganda, qualify as partly free, Sudan, The Gambia and Ethiopia are classified as not free. The report is extremely interesting. I urge anyone interested in innovation and media freedom to have a look at the data on [freedomhouse.org](https://freedomhouse.org/sites/default/files/FH_FOTN_2015Report.pdf). Why is the freedom of the internet so important for innovation, one might ask. There are different perspectives to the problem. Obviously, the blocking of certain types of online-content results in huge information barriers. Innovation often draws on insider information about the latest trends, know-how and on new technological opportunities. If access to the internet as a global database of information is restricted, its educational potential can´t be tapped. Furthermore, censorship creates a general atmosphere of discomfort and fear. As [allafrica.com](http://allafrica.com/stories/201412011034.html) put it:
+
+> "Censorship is essentially a negative process; it is inhibitory and restrictive of action. It derives its force largely from fear and the threats of power. All forms of social taboos are designed to do just this. They furnish the individual with guideposts in his thinking, which keep him within the boundaries set by the dominant power. Where it exists, censorship greatly inhibits creativity and innovation." (Source: [Allafrica.com](http://allafrica.com/stories/201412011034.html))
+
+All in all, the internet provides manifold opportunities for businesses, scholars and the public to educate themselves and to strive for global change. Unfortunately, as the Freedom of the Net Report 2015 confirms, censorship by authorities remains an issue in Africa and in many other regions in the world. And it is unlikely to just go away. The questions are: What actions need to be taken to encourage innovation in such a repressive political environment? And what alternatives are there to foster a culture of (sustainable) innovation, if access to important information is denied?,

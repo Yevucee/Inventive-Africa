@@ -1,0 +1,35 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  makeHref: (page: number) => string;
+  label: string;
+}
+
+const { currentPage, totalPages, makeHref, label } = Astro.props;
+if (totalPages <= 1) return null;
+---
+
+<nav class="pagination" aria-label={label}>
+  {
+    currentPage > 1 ? (
+      <a class="pagination__control" href={makeHref(currentPage - 1)}>
+        Newer
+      </a>
+    ) : (
+      <span class="pagination__control pagination__control--disabled">Newer</span>
+    )
+  }
+  <span class="pagination__status">
+    Page {currentPage} of {totalPages}
+  </span>
+  {
+    currentPage < totalPages ? (
+      <a class="pagination__control" href={makeHref(currentPage + 1)}>
+        Older
+      </a>
+    ) : (
+      <span class="pagination__control pagination__control--disabled">Older</span>
+    )
+  }
+</nav>

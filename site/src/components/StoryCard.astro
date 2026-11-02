@@ -1,0 +1,86 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { displayAuthor, featuredImageSrc } from '../lib/posts';
+import { formatDateShort, hrefPath, postUrl } from '../lib/postPaths';
+import { categorySlug, formatCategoryLabel, visibleCategoryLabels } from '../lib/taxonomy';
+import { formatReadingTime } from '../lib/readingTime';
+import MediaImage from './MediaImage.astro';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+  variant?: 'feature' | 'compact' | 'list' | 'feed';
+  headingLevel?: 'h2' | 'h3';
+  hideImage?: boolean;
+  readingMinutes?: number;
+}
+
+const {
+  post,
+  variant = 'list',
+  headingLevel = 'h2',
+  hideImage = false,
+  readingMinutes,
+} = Astro.props;
+const Tag = headingLevel;
+const image = featuredImageSrc(post);
+const showImage = !hideImage && image && variant !== 'feed';
+const topics = visibleCategoryLabels(post.data.categories).slice(0, 2);
+const readLabel = readingMinutes ? formatReadingTime(readingMinutes) : null;
+---
+
+<article class:list={['story-card', `story-card--${variant}`]}>
+  {
+    showImage ? (
+      <a class="story-card__media" href={hrefPath(postUrl(post))} tabindex="-1" aria-hidden="true">
+        <MediaImage
+          src={image!}
+          alt={post.data.featuredImageAlt || post.data.title}
+          fit="cover"
+          priority={false}
+        />
+      </a>
+    ) : null
+  }
+  <div class="story-card__body">
+    {
+      topics.length && variant !== 'feed' ? (
+        <p class="story-card__topics">
+          {topics.map((category) => (
+            <a class="topic-link" href={hrefPath(`/topic/${categorySlug(category)}/`)}>
+              {formatCategoryLabel(category)}
+            </a>
+          ))}
+        </p>
+      ) : null
+    }
+    {
+      variant === 'feed' && topics.length ? (
+        <p class="story-card__feed-label">{formatCategoryLabel(topics[0])}</p>
+      ) : null
+    }
+    <Tag class="story-card__title">
+      <a href={hrefPath(postUrl(post))}>{post.data.title}</a>
+    </Tag>
+    {
+      post.data.description && variant !== 'feed' ? (
+        <p class="story-card__dek">{post.data.description}</p>
+      ) : null
+    }
+    {
+      post.data.description && variant === 'feed' ? (
+        <p class="story-card__feed-excerpt">{post.data.description}</p>
+      ) : null
+    }
+    <p class="story-meta">
+      <time datetime={post.data.pubDate.toISOString()}>{formatDateShort(post.data.pubDate)}</time>
+      {readLabel ? (
+        <>
+          <span aria-hidden="true">·</span>
+          <span>{readLabel}</span>
+        </>
+      ) : null}
+      <span aria-hidden="true">·</span>
+      <span>{displayAuthor(post.data.author)}</span>
+    </p>
+  </div>
+</article>

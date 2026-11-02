@@ -1,0 +1,27 @@
+---
+import MediaImage from './MediaImage.astro';
+import { normalizeUploadSrc, uploadFileExists } from '../lib/media';
+
+const { src, alt } = Astro.props;
+const normalized = normalizeUploadSrc(src ?? '');
+const missing = normalized.startsWith('/wp-content/uploads/') && !uploadFileExists(normalized);
+---
+
+{
+  missing ? (
+    <figure class="media-frame media-frame--missing prose-media">
+      <div class="media-frame__placeholder" role="img" aria-label={alt || 'Image unavailable in archive'}>
+        <span class="media-frame__placeholder-label">Image unavailable</span>
+        <span class="media-frame__placeholder-detail">
+          This image was referenced in the WordPress article but is not present in the migrated media archive.
+        </span>
+      </div>
+    </figure>
+  ) : normalized.startsWith('/wp-content/uploads/') ? (
+    <MediaImage src={normalized} alt={alt ?? ''} fit="contain" class="prose-media" />
+  ) : (
+    <figure class="media-frame media-frame--contain prose-media">
+      <img src={src} alt={alt ?? ''} loading="lazy" decoding="async" class="media-frame__img media-frame__img--contain" />
+    </figure>
+  )
+}

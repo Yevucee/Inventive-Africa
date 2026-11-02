@@ -1,0 +1,35 @@
+---
+title: "Did You Know how to plant 1 billion trees a year?"
+description: "Deforestation is a terrible problem worldwide. Across continents, trees are being cut down at a staggering rate. Time magazine estimate that \"15 billion trees e"
+pubDate: 2016-11-07T13:15:22.000Z
+updatedDate: 2016-11-09T03:45:25.000Z
+author: "inventiveafrica"
+slug: "did-you-know-how-to-plant-1-billion-trees-a-year"
+wpId: "4344"
+legacyUrl: "http://inventiveafrica.com/2016/11/07/did-you-know-how-to-plant-1-billion-trees-a-year/"
+legacyPath: "/2016/11/07/did-you-know-how-to-plant-1-billion-trees-a-year/"
+type: "post"
+categories: ["Projects"]
+tags: ["africa", "climate change", "deforestation", "development", "illegal", "Innovation", "technology"]
+featuredImage: "/wp-content/uploads/2016/11/deforestation-africa.png"
+featuredImageAlt: ""
+---
+Deforestation is a terrible problem worldwide. Across continents, trees are being cut down at a staggering rate. [Time magazine](http://time.com/4019277/trees-humans-deforestation/) estimate that "15 billion trees each year and the global tree count has fallen by 46% since the beginning of human civilization." The effect on the planet is devastating. Trees offer us, as a planet, many benefits. They suck Carbon dioxide from the air, act as a habitat for many of the worlds animals, and protect moist forest soils from drying out under the hot sun. Removing trees at such a rate has a profound effect on the water cycle that we have all learn about in geography class in school! Without trees, former forests often turn into barren desertified land, defeating the purpose as to why many of them have been illegally deforested. There is of course legal forestry, but one estimation suggests almost [half the worlds deforestation is illegal](https://en.wikipedia.org/wiki/Illegal_logging#Scale). Africa is not immune to this with many beautiful forests disappearing and it is complicated to eradicate. Many locals are implicit in the illegal trade simply because it gives them a much needed income, and they can not be blamed for this because local conditions mean many of them live below the poverty line. How is it possible to stop something that is happening on such a large scale? There are some innovations that are helping to fight against illegal deforestation.
+
+![soil erosion africa.png](/wp-content/uploads/2016/11/soil-erosion-africa.png) Desertification in Africa
+
+[Rainforest Foundation UK](http://www.rainforestfoundationuk.org/) has been trialling an initiative that actually uses local communities to track and report on illegal activities in their own forests. In the project called Forestlink, they equip them with satellite phones and mapping software so that local can report real time directly from ground zero. With just a simple process locals are able to log any illegal activities, which will be geo tagged and sent to a centralised database. Partner organisations can then be sent out to confirm the incident. Often, lack of mobile network and equipment has meant that even when the locals were on board to save their forests reports are very slow to filter through. Now, local partners can be immediately mobilised to the exact area of activity making it more risky for those involved in the illegal operations.
+
+![ForestLink training deforestation.png](/wp-content/uploads/2016/11/forestlink-training-deforestation.png) Rainforest Foundation UK training locals in their Forestlink scheme
+
+Tracking the decline of African forests is also very important to be able to create methods of stopping the illegal trade. One tracking method came out of a meeting between Lilian Pintea and Jane Goodall, the explorer famed for her ape conservation. After seeing the aerial pictures taken by Lillian of the landscape to show how it had altered, Goodall immediately understood that this technology could be of much use. Now, the low-res photos from aeroplanes have turned into high-res satellite images that show a stark change forestation. The [Jane Goodall Institute](http://www.janegoodall.org/) is also using other techniques to track forestry, and of course Chimpanzee data around Bonventura in Tanzania. Using software on a mobile phone, they send people into the forest to catalogue illegal activity, as well as signs of wildlife, or anything that is out of place in the protected area. This is not as quick as the report from the solution of the Rainforest Foundation UK, (Maybe there is a chance for them to join forces here?) but even though the data is only uploaded monthly, it gives very detailed information about everything happening in the zone, and this can inform their policy for the future.
+
+![forest monitors -Jane Goodall.png](/wp-content/uploads/2016/11/forest-monitors-jane-goodall.png) Satellite mapping with data points -red = potential illegal activity (picture from [www.takepart.com](http://www.takepart.com/))
+
+So, once you have slowed illegal deforestation, how do you reforest? Sometimes it is not easy, because illegal loggers, with their lack of training and experience often cut the trees to high up leaving big stumps left in the ground that can not be removed easily. For these there is a chance to grow trees directly out of the remaining stump. Replanting trees by hand is time consuming, although this would offer employment for the local communities. But, there is another solution that is far quicker, and decidedly more techy! We have spoken about the use of drones before, and this is another innovative drone use. [Biocarbon engineering](http://www.biocarbonengineering.com/) plan to plant 1 billion trees a year by firing seeds them the ground using drones. Alongside their planting program, they have also developed their own mapping software, which as well as providing important data, helps the drone automatically fly and reforest huge areas.
+
+[Watch video on YouTube](https://www.youtube.com/watch?v=QPNhCa9IkAE)
+
+Deforestation is causing a desertified stain across out planet and changing out climate, and the homes of many of the world's animals. It is very important that we bring technologies together to create new solutions to slow and stop these illegal activities. Do you know of any other methods used to either stop illegal deforestation or reforest large areas quickly and efficiently? Please get in contact with us on Twitter [@InventiveAfrica](https://inventiveafricadotnet.wordpress.com/mentions/inventiveafrica/) and please also share the blog on **[Twitter](https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&ref_src=twsrc%5Etfw&related=wordpressdotcom&text=Did%20You%20Know%20tech%20can%20unburden%20African%20girls%20at%20home%3F&tw_p=tweetbutton&url=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&via=InventiveAfrica)** **and** **[Facebook](https://www.facebook.com/sharer/sharer.php?app_id=249643311490&sdk=joey&u=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&display=popup&ref=plugin&src=share_button).**
+
+,

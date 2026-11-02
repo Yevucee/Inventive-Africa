@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getYearArchiveIndex } from '../../lib/posts';
+import { hrefPath } from '../../lib/postPaths';
+
+const posts = await getCollection('posts');
+const years = getYearArchiveIndex(posts);
+---
+
+<BaseLayout title="Archive by date" description="Browse Inventive Africa articles by year." mainClass="archive-index">
+  <header class="page-header">
+    <h1>Browse by date</h1>
+    <p class="lede">Jump to a publication year, then month.</p>
+  </header>
+  <ul class="year-list">
+    {
+      years.map(([year, count]) => (
+        <li>
+          <a href={hrefPath(`/archive/${year}/`)}>
+            <span>{year}</span>
+            <span class="year-list__count">{count} articles</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

@@ -1,0 +1,15 @@
+---
+title: "Did You Know About The Latest ICT-Trends In Africa?"
+description: "Since the year 2015 is almost over, I have taken some time to read up on ICT-trends in Africa for 2016. It goes without saying that staying up to date with the "
+pubDate: 2015-12-28T13:15:09.000Z
+updatedDate: 2015-12-28T06:15:09.000Z
+author: "inventiveafrica"
+slug: "did-you-know-about-the-latest-ict-trends-in-africa"
+wpId: "88"
+legacyUrl: "http://inventiveafrica.com/2015/12/28/did-you-know-about-the-latest-ict-trends-in-africa/"
+legacyPath: "/2015/12/28/did-you-know-about-the-latest-ict-trends-in-africa/"
+type: "post"
+categories: ["Uncategorized"]
+tags: ["africa", "Banking", "ICT", "infrastructure", "Innovation", "internet", "Mobile", "trends"]
+---
+Since the year 2015 is almost over, I have taken some time to read up on ICT-trends in Africa for 2016. It goes without saying that staying up to date with the latest ICT-innovations is of vital importance for the African continent. Innovation in the ICT-sector serves as a catalyst and encourages further innovation. This is why I would like to dedicate today’s post on some of the ICT-trends in Africa for 2016. According to [africastrictlybusiness.com](http://www.africastrictlybusiness.com/news-analysis/africa%E2%80%99s-ict-landscape-six-trends-watch-2016), there are six main ICT-trends to watch in 2016. In this blog post, I will highlight three of them. _Firstly, public sector actors such as governments will become more involved_. Governments will come to realize how important connectivity is to encourage economic growth. Thus, they will become more involved in the market. Whether or not this is a good thing is highly questionable. _Secondly, mobile payment will expand in 2016_. I have published a blog post about mobile payment in Africa before. Apparently, this trend is getting more and more important. According to the author, in 2016 growth will take place in different areas: New countries such as Tanzania or Zimbabwe will experience significant growth in mobile payments and will eventually challenge Kenya, the current forerunner in mobile payment proliferation. Furthermore, mobile payment will increasingly be used for merchant payments or international remittances. _Thirdly, industry consolidation will increase in the telecommunications sector._ This is due to the high infrastructure costs. Apparently, five companies own 60% of all telecommunications subscribers in Africa. It goes without saying, that this makes it harder for small operators to remain competitive and for innovative start-ups to enter the market. To learn more about the latest ICT-trends, you will find the article [here](http://www.africastrictlybusiness.com/news-analysis/africa%E2%80%99s-ict-landscape-six-trends-watch-2016). As one can see, emerging ICT-trends in Africa will also provide challenges for innovation. My new year’s resolution for 2016 is to shed light on how African innovators intend to meet the challenges that are brought about by the changing ICT landscape.,

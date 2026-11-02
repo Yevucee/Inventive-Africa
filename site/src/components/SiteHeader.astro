@@ -1,0 +1,44 @@
+---
+import { hrefPath } from '../lib/postPaths';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') || '';
+const normalized = base && path.startsWith(base) ? path.slice(base.length) || '/' : path;
+---
+
+<header class="site-header">
+  <div class="site-header__bar wrap">
+    <a class="site-wordmark" href={hrefPath('/')}>
+      <span class="site-wordmark__name">Inventive Africa</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary">
+      <ul>
+        <li>
+          <a href={hrefPath('/articles/')} aria-current={normalized.includes('/articles') ? 'page' : undefined}>
+            Stories
+          </a>
+        </li>
+        <li>
+          <a href={hrefPath('/topics/')} aria-current={normalized.includes('/topic') ? 'page' : undefined}>
+            Topics
+          </a>
+        </li>
+        <li>
+          <a href={hrefPath('/archive/')} aria-current={normalized.includes('/archive') ? 'page' : undefined}>
+            Archive
+          </a>
+        </li>
+        <li>
+          <a href={hrefPath('/about/')} aria-current={normalized.endsWith('/about') ? 'page' : undefined}>
+            About
+          </a>
+        </li>
+        <li>
+          <a href={hrefPath('/search/')} aria-current={normalized.endsWith('/search') ? 'page' : undefined}>
+            Search
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,23 @@
+---
+title: "Did You Know About The Importance Of Social Innovation In Africa?"
+description: "Lately I’ve spent a quite a lot of time searching the web for social innovation happening in Africa. My increased interest in social innovation stems from an ar"
+pubDate: 2015-10-18T15:01:35.000Z
+updatedDate: 2015-12-07T06:09:31.000Z
+author: "inventiveafrica"
+slug: "did-you-know-about-the-importance-of-social-innovation-in-africa-2"
+wpId: "20"
+legacyUrl: "http://inventiveafrica.com/2015/10/18/did-you-know-about-the-importance-of-social-innovation-in-africa-2/"
+legacyPath: "/2015/10/18/did-you-know-about-the-importance-of-social-innovation-in-africa-2/"
+type: "post"
+categories: ["Uncategorized"]
+tags: ["Innovation", "mrushwa", "social"]
+---
+Lately I’ve spent a quite a lot of time searching the web for _social innovation_ happening in Africa. My increased interest in social innovation stems from [an article](http://www.africainnovationsummit.com/blog/?p=1181) I’ve read on the [Africa Innovation Summit’s Blog](http://www.africainnovationsummit.com/blog). The article highlights the importance of creating innovation by the people, for the people. After all, that is what social innovation is about. As an example for such innovation, the article mentions MRushwa, a mobile and web based application designed to fight corruption in Tanzania. It aims to encourage citizens to report corruption online. The advantages are obvious: Spreading the word about potentially corrupt businesses increases public awareness about this issue and prevents citizens from falling into the corruption trap. Furthermore, as the article highlights:
+
+> _What these solutions have in common is their elegance – that precarious balance of a system that is technologically sophisticated but is also user-friendly and can be used by an African in a rural African setting characterised by low literacy rates. Modern meets rural._
+
+Reading about this application and about the benefits of social innovation in general reminded me of [a blog post](/2015/10/02/did-you-know-that-africa-is-leading-the-way-in-adoption-of-mobile-banking/) I did earlier on mobile banking in Africa. Since many Africans are using mobile phones, there is a huge potential to be tapped here. However, as the article I was referring to earlier in this post also states, challenges are manifold – It will be interesting to see what the future brings for African social innovation and how these challenges are being faced in the future.
+
+> Clearly, Africa has the capacity and talent in its youth to develop innovations of magnitude and serious problem- solving capacity. However, given how entrenched the African development challenge is, this is not enough in its own. There is also a critical need to increase the rate at which such innovations are emerging and the speed of go-to-market as well as the scale and spread so that they have greater reach and impact. I can’t help but observe that most innovations are concentrated in Kenya. This is where the private sector’s leadership role can be realised. More specifically, the African private sector. Browsing the CcHUB website, I note that they have support from Google, Nokia, Blackberry and Samsung – amongst others. In East Africa, Vodacom has been instrumental to MPesa, MRushwa and MFarm. The African private sector is woefully conspicuous by its absence apart from the Tony Elumelu Foundation, a leading pioneer of impact investing in Africa. The dilemma for me is that there is talent in Africa brimming with solutions but the money is not very forthcoming. We desperately need more Africans funding African solutions to African problems if Africa is to claim the 21st Century. If the African private sector is unable to fund such hubs and innovations over and above their current budgets, I would urge them to rethink their existing Corporate Social Investment (CSI) budgets. What if, for example, a portion was redirected to funding such hubs and innovations? There really is no greater social investment than giving a young African an opportunity to commercialise his/her innovations, create jobs in the process and become self-reliant. There is no greater social investment than giving our youth a platform to harness their creative abilities for the betterment of the continent. It would appear to me to be a relevant, appropriate and sustainable form of CSI suited to Africa’s needs and future. Alternatively, the African private sector could choose to view these nascent innovations as business opportunities and invest in them early. Either way, as a new form of CSI or as a business case, investing in our talent would appear to be a win-win!
+
+,

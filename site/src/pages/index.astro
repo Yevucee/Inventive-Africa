@@ -1,0 +1,82 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeHero from '../components/HomeHero.astro';
+import LeadStory from '../components/LeadStory.astro';
+import StoryCard from '../components/StoryCard.astro';
+import {
+  HOMEPAGE_RECENT_COUNT,
+  HOMEPAGE_SECONDARY_FEATURED,
+  hasFeaturedImage,
+  sortPostsNewestFirst,
+  getCategoryIndex,
+} from '../lib/posts';
+import { hrefPath } from '../lib/postPaths';
+import { readingTimeMinutes } from '../lib/readingTime';
+
+const allPosts = sortPostsNewestFirst(await getCollection('posts'));
+const hero = allPosts.find((post) => hasFeaturedImage(post)) ?? allPosts[0];
+const secondaryPool = allPosts.filter((post) => post.id !== hero?.id && hasFeaturedImage(post));
+const secondaryFeatured = secondaryPool.slice(0, HOMEPAGE_SECONDARY_FEATURED);
+const secondaryIds = new Set(secondaryFeatured.map((p) => p.id));
+const archiveHighlights = allPosts
+  .filter((post) => post.id !== hero?.id && !secondaryIds.has(post.id))
+  .slice(0, HOMEPAGE_RECENT_COUNT);
+
+const topics = getCategoryIndex(allPosts);
+const topicRail = topics.slice(0, 6).map((t) => ({ slug: t.slug, label: t.label }));
+
+function bodyText(post: (typeof allPosts)[number]) {
+  return post.body ?? '';
+}
+---
+
+<BaseLayout
+  title="Inventive Africa"
+  description="African innovation, technology, and inspiration — change is happening now."
+  mainClass="home-page"
+>
+  <HomeHero
+    slot="full-bleed"
+    heroPost={hero}
+    topicRail={topicRail}
+    postCount={allPosts.length}
+    topicCount={topics.length}
+    readingMinutes={hero ? readingTimeMinutes(bodyText(hero)) : undefined}
+  />
+
+  {hero ? <LeadStory post={hero} readingMinutes={readingTimeMinutes(bodyText(hero))} /> : null}
+
+  {
+    secondaryFeatured.length ? (
+      <section class="home-section" aria-labelledby="featured-heading">
+        <header class="section-heading">
+          <h2 id="featured-heading">Also worth reading</h2>
+          <p class="section-heading__hint">Recent highlights with strong photography from the archive.</p>
+        </header>
+        <div class="home-feature-grid">
+          {secondaryFeatured.map((post) => (
+            <StoryCard post={post} variant="feature" headingLevel="h3" />
+          ))}
+        </div>
+      </section>
+    ) : null
+  }
+
+  <section class="home-section" aria-labelledby="archive-heading">
+    <header class="section-heading">
+      <h2 id="archive-heading">Latest from the archive</h2>
+      <a class="section-heading__more" href={hrefPath('/articles/')}>View all stories</a>
+    </header>
+    <div class="home-feed">
+      {archiveHighlights.map((post) => (
+        <StoryCard
+          post={post}
+          variant="feed"
+          headingLevel="h3"
+          readingMinutes={readingTimeMinutes(bodyText(post))}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

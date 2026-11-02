@@ -1,0 +1,9 @@
+{
+  "name": "@inventive-africa/migration",
+  "type": "module",
+  "version": "0.0.1",
+  "dependencies": {
+    "fast-xml-parser": "^5.2.5",
+    "turndown": "^7.2.0"
+  }
+}

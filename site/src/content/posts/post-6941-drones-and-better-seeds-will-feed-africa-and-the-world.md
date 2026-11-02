@@ -1,0 +1,33 @@
+---
+title: "Did You Know drones and better seeds will feed Africa and the world?"
+description: "Without farms, we wouldn't survive. Well some of us may manage to scavenge for food, maybe even pick up hunting again, but life would not be the same again. The"
+pubDate: 2017-03-23T13:12:29.000Z
+updatedDate: 2017-03-23T06:22:38.000Z
+author: "inventiveafrica"
+slug: "drones-and-better-seeds-will-feed-africa-and-the-world"
+wpId: "6941"
+legacyUrl: "http://inventiveafrica.com/2017/03/23/drones-and-better-seeds-will-feed-africa-and-the-world/"
+legacyPath: "/2017/03/23/drones-and-better-seeds-will-feed-africa-and-the-world/"
+type: "post"
+categories: ["technology"]
+tags: ["africa", "agriculture", "drones", "farming", "Innovation", "maize", "seeds"]
+featuredImage: "/wp-content/uploads/2017/03/drones-seeds-agric.png"
+featuredImageAlt: ""
+---
+Without farms, we wouldn't survive. Well some of us may manage to scavenge for food, maybe even pick up hunting again, but life would not be the same again. The life of a farmer is not plain sailing. There are many hurdles to cross whether they are growing crops or producing livestock. The weather, disease type of seed, availability of machinery, storage and transportation all play a role in whether or not a farmer is successful. The weather, sadly, can not be controlled, as we are seeing now in parts of East Africa where they are facing a devastating famine. There are some methods of farming that may have been able to mitigate against some of the hardships they face, such as [aquaponics](/2017/03/10/using-aquaponics-africa-can-farm-all-year/), a method of farming that uses much less water, or [cow insurance](/2016/11/09/did-you-know-cow-insurance-is-changing-african-farmers-family-nutrition/), which offers an innovative way of providing security to farmers in high risk areas.  Access to machinery is also a possibility using the power of [cooperatives](/2016/08/18/did-you-know-cooperatives-could-save-africa-agriculture/), which enable farmers to come together, pool their money and invest in machinery like the [Tryctor](/2016/07/19/did-you-know-that-africa-is-the-home-of-innovation/), which will benefit them all. There are even mobile apps that enable people to sell their produce at the right price and to easily transport it to the market.
+
+![introducing-the-tryctor-9-638.jpg](/wp-content/uploads/2017/03/introducing-the-tryctor-9-638.jpg) Tryctor was developed to empower small scale farmers in Africa
+
+Seeds also play a big role in the quality of farm produce. It may seem obvious (without a seed there would be no plant) but choosing the wrong variety can drastically alter the success of a farming season. There has been great strides taken in recent years by companies like Syngenta, who are producing seeds that will be more effective in certain areas. In Kenya, [MbeguChoice](http://www.mbeguchoice.com/) are focussing directly on that issue. They have a system that enables farmers to easily decide on which seeds they need, depending on the location of their farm. Their website takes farmers through a series of questions, such as location of farm, ecological zone (eg coastal or highland), and which crop would like to be grown. For example, if you are live at mid altitude in Kajiado and you want to grow Irish potatoes (and frankly, who wouldn't want to grow Irish potatoes!) but you are concerned about disease effecting your crop, you would be advised to go for the Asante variety release din 1998, which is particularly resistant to blight.
+
+![irish potatoe- asante.png](/wp-content/uploads/2017/03/irish-potatoe-asante.png) Irish Potato suggestions for Kenya
+
+This service is a simple way to make sure farmers have the optimum seed for their crop. It can be downloaded as an app or used on the website and, if utilised properly, should lead to increased yields and survival rate of crops across Kenya. But, how do you get the data to know which seeds are suitable for which area? By using drones of course! In southern Africa, the [International Maize and Wheat Improvement Center](http://www.cimmyt.org/) (CIMMYT) have turned to drones to collect data about land to develop the crops to be more suitable to individual areas. A drone is able to gather data from 1,000 plots of land in just ten minutes. The same area would take eight hours to do it manually. This drastically cuts the amount of time to get relevant information from the whole country and when the resolution of the cameras they use becomes better, it will be even more efficient. This means sites like MbeguChoice, will have even better information to give to farmers, and breeders will be able to develop crops even more effectively.
+
+![drones farming.png](/wp-content/uploads/2017/03/drones-farming.png) Drones are the new agricultural tools
+
+  Africa has the space to become the worlds bread basket. Agriculture has the chance to increase African exports and and increase the status of the continent internationally. Firstly, the agriculture sector must feed Africa and must be prepared the droughts that will inevitably raise the disastrous heads from time to time. When all the land is well utilised, using the right information to inform about the correct seed use, then there will, and should not be, any need for imports of staple crops like rice, which flood the market, pushing rice farmers out of business. If you know of any other Agricultural innovations in Africa or you want to be a guest blogger get in contact with us on Twitter **[@InventiveAfrica](https://inventiveafricadotnet.wordpress.com/mentions/inventiveafrica/)** or via  **[email](mailto:inventiveafrica1@gmail.com)**, and please share the blog with your network on **[Twitter](https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&ref_src=twsrc%5Etfw&related=wordpressdotcom&text=Did%20You%20Know%20tech%20can%20unburden%20African%20girls%20at%20home%3F&tw_p=tweetbutton&url=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&via=InventiveAfrica)** and **[Facebook](https://www.facebook.com/sharer/sharer.php?app_id=249643311490&sdk=joey&u=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&display=popup&ref=plugin&src=share_button).** Also, we have a new **[Facebook page](https://www.facebook.com/Inventiveafrica/?fref=ts)**! Please like it, and carry on the dialogue about African Innovation there!
+
+![fb\_icon\_325x325.png](/wp-content/uploads/2017/03/fb_icon_325x3251.png) [Check out our Facebook page](http://www.facebook.com/inventiveafrica)
+
+ ,

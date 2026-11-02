@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Pagination from '../../../../components/Pagination.astro';
+import StoryCard from '../../../../components/StoryCard.astro';
+import { getCategoryIndex, postsInCategory, sortPostsNewestFirst } from '../../../../lib/posts';
+import { paginate, topicPageUrl } from '../../../../lib/pagination';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('posts');
+  const topics = getCategoryIndex(allPosts);
+  const paths = [];
+  for (const topic of topics) {
+    const posts = postsInCategory(sortPostsNewestFirst(allPosts), topic.label);
+    const { totalPages } = paginate(posts, 1);
+    for (let page = 2; page <= totalPages; page += 1) {
+      paths.push({
+        params: { slug: topic.slug, page: String(page) },
+        props: { label: topic.label },
+      });
+    }
+  }
+  return paths;
+}
+
+const { label } = Astro.props;
+const slug = Astro.params.slug!;
+const pageNumber = Number(Astro.params.page);
+const posts = postsInCategory(sortPostsNewestFirst(await getCollection('posts')), label);
+const { items, currentPage, totalPages } = paginate(posts, pageNumber);
+---
+
+<BaseLayout
+  title={`${label} · Page ${currentPage}`}
+  description={`Articles filed under ${label}.`}
+  mainClass="archive-page"
+>
+  <header class="page-header">
+    <p class="eyebrow">Topic</p>
+    <h1>{label}</h1>
+    <p class="lede">Page {currentPage} of {totalPages}</p>
+  </header>
+  <div class="archive-list">
+    {items.map((post) => (
+      <StoryCard post={post} variant="list" headingLevel="h2" />
+    ))}
+  </div>
+  <Pagination
+    currentPage={currentPage}
+    totalPages={totalPages}
+    makeHref={(page) => topicPageUrl(slug, page)}
+    label={`${label} topic pages`}
+  />
+</BaseLayout>

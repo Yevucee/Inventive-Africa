@@ -1,0 +1,19 @@
+---
+title: "Did You Know eBay see the potential of the African Market?"
+description: "E-commerce in Africa is hotting up, as we wrote about previously , and due to new payment methods, such as mobile money, and the increased reach of the internet"
+pubDate: 2016-12-05T13:28:20.000Z
+updatedDate: 2016-12-06T01:57:16.000Z
+author: "inventiveafrica"
+slug: "ebay-see-the-potential-of-the-african-market"
+wpId: "5069"
+legacyUrl: "http://inventiveafrica.com/2016/12/05/ebay-see-the-potential-of-the-african-market/"
+legacyPath: "/2016/12/05/ebay-see-the-potential-of-the-african-market/"
+type: "post"
+categories: ["Projects", "Uncategorized"]
+tags: ["africa", "business", "e-commerce", "ebay", "Innovation", "internet", "Mobile", "morocco", "tech", "technology"]
+featuredImage: "/wp-content/uploads/2016/12/soldbyebay.png"
+featuredImageAlt: ""
+---
+E-commerce in Africa is hotting up, [as we wrote about previously](/2016/09/26/african-e-commerce-is-the-next-big-thing/), and due to new payment methods, such as mobile money, and the increased reach of the internet, more and more people are connected to the international market. Previously, not having a credit card was a barrier to purchasing items online, and solutions, such as paying with cash on delivery were important. Now, with mobile money and also increased bank accounts, people can buy and maybe more importantly, sell their products to the rest of Africa and the world. With African wares in high demand, especially African fashion in the case of [Zuvaa](/2016/11/11/africans-running-from-usa-are-good-for-africa/), e-commerce gives Africa a chance to balance trade disparity. eBay have recently taken a big step to taking advantage of this increase in interest in e-commerce in Africa. As we mentioned before, they signed a deal with the International Trade Centre, an arm of the UN,  to make it easier for African businesses to use the platform. In there first entrance to the African market, their [Moroccan marketplace](http://www.ebay.fr/rpp/made-in-morocco-en) is now up and running. ![Ebay.png](/wp-content/uploads/2016/12/ebay2.png) The African takes the form of a specific market place for Moroccan goods. There you can search through items such as fashion, books, handicrafts and "liquid Gold" Argon oil. Offering secure payments, as usual, the eBay platform enables groups of companies to all place their wares in the same place, bring Morocco to the rest of the world. ![morocco.png](/wp-content/uploads/2016/12/morocco.png) ![aargonoil.png](/wp-content/uploads/2016/12/aargonoil.png)![5 Dec 2016 09-36-46.png](/wp-content/uploads/2016/12/5-dec-2016-09-36-462.png) We couldn't find out when  eBay will roll out this service to other countries, but with the usability of the service, we think it will be a big success and really challenge the other market places in Africa. We also feel it is only a matter of time until other big companies, such as Amazon, also jump on the bandwagon and try and tap into the power of the African market. Have you had any experience with online shopping in Africa? How do you feel about eBay entering the African marketplace? Please get in contact with us on Twitter [@InventiveAfrica](https://inventiveafricadotnet.wordpress.com/mentions/inventiveafrica/) and please also share the blog on **[Twitter](https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&ref_src=twsrc%5Etfw&related=wordpressdotcom&text=Did%20You%20Know%20tech%20can%20unburden%20African%20girls%20at%20home%3F&tw_p=tweetbutton&url=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&via=InventiveAfrica)** **and** **[Facebook](https://www.facebook.com/sharer/sharer.php?app_id=249643311490&sdk=joey&u=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&display=popup&ref=plugin&src=share_button).**
+
+,

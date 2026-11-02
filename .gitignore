@@ -1,9 +1,12 @@
 # WordPress migration material stays local
-migration-source/
+migration-source
 exports/
 wordpress-export*.xml
 media-export*.tar
 media-export*.zip
+
+# Generated migration reports (reproduce locally)
+docs/generated/
 
 # Local configuration and build output
 .env
@@ -13,3 +16,7 @@ node_modules/
 dist/
 .astro/
 .DS_Store
+
+# Site build output
+site/dist/
+site/.astro/
