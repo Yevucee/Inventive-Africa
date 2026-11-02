@@ -4,6 +4,10 @@ export const SITE_LOGO_ALT = 'Inventive Africa';
 
 export const SITE_TAGLINE = 'Change is happening now';
 
+/** Optional full-bleed hero photo path under `public/`; empty uses the built-in pattern. */
+export const SITE_HERO_IMAGE = '';
+export const SITE_HERO_IMAGE_ALT = 'Inventive Africa';
+
 /** Brand colours sampled from original logo artwork. */
 export const BRAND = {
   green: '#2d8f47',

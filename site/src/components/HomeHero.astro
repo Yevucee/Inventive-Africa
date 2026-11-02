@@ -1,0 +1,121 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { displayAuthor } from '../lib/posts';
+import { formatDateShort, hrefPath, postUrl } from '../lib/postPaths';
+import { formatCategoryLabel } from '../lib/taxonomy';
+import { formatReadingTime } from '../lib/readingTime';
+import {
+  SITE_HERO_IMAGE,
+  SITE_LOGO_ALT,
+  SITE_LOGO_SRC,
+  SITE_TAGLINE,
+} from '../lib/branding';
+
+interface TopicRailItem {
+  slug: string;
+  label: string;
+}
+
+interface Props {
+  heroPost?: CollectionEntry<'posts'>;
+  topicRail?: TopicRailItem[];
+  postCount: number;
+  topicCount: number;
+  readingMinutes?: number;
+}
+
+const { heroPost, topicRail = [], postCount, topicCount, readingMinutes } = Astro.props;
+const backdropStyle = SITE_HERO_IMAGE
+  ? { backgroundImage: `url(${hrefPath(SITE_HERO_IMAGE)})` }
+  : undefined;
+const readLabel = readingMinutes ? formatReadingTime(readingMinutes) : null;
+---
+
+<section class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-hero__backdrop" style={backdropStyle} aria-hidden="true"></div>
+  <div class="home-hero__scrim" aria-hidden="true"></div>
+  <div class="home-hero__inner wrap">
+    <div class="home-hero__grid">
+      <div class="home-hero__brand">
+        <a class="home-hero__logo-link" href={hrefPath('/')}>
+          <img
+            class="home-hero__logo"
+            src={hrefPath(SITE_LOGO_SRC)}
+            width="120"
+            height="120"
+            alt={SITE_LOGO_ALT}
+            decoding="async"
+            fetchpriority="high"
+          />
+        </a>
+        <div class="home-hero__titles">
+          <p class="home-hero__kicker">African innovation &amp; technology</p>
+          <h1 id="home-hero-title" class="home-hero__title">Inventive Africa</h1>
+          <p class="home-hero__tagline">{SITE_TAGLINE}</p>
+        </div>
+      </div>
+
+      <div class="home-hero__pitch">
+        <p class="home-hero__dek">
+          Stories on startups, digitalisation, and ideas from across the continent — from the Inventive
+          Africa archive.
+        </p>
+        <ul class="home-hero__stats" aria-label="Site highlights">
+          <li><strong>{postCount}</strong> stories</li>
+          <li><strong>{topicCount}</strong> topics</li>
+          <li>Est. 2015</li>
+        </ul>
+      </div>
+
+      {
+        heroPost ? (
+          <aside class="home-hero__spotlight">
+            <p class="home-hero__spotlight-label">Featured now</p>
+            <h2 class="home-hero__spotlight-title">
+              <a href={hrefPath(postUrl(heroPost))}>{heroPost.data.title}</a>
+            </h2>
+            {heroPost.data.description ? (
+              <p class="home-hero__spotlight-dek">{heroPost.data.description}</p>
+            ) : null}
+            <p class="home-hero__spotlight-meta">
+              <time datetime={heroPost.data.pubDate.toISOString()}>
+                {formatDateShort(heroPost.data.pubDate)}
+              </time>
+              {readLabel ? (
+                <>
+                  <span aria-hidden="true">·</span>
+                  <span>{readLabel}</span>
+                </>
+              ) : null}
+              <span aria-hidden="true">·</span>
+              <span>{displayAuthor(heroPost.data.author)}</span>
+            </p>
+            <a class="home-hero__cta" href={hrefPath(postUrl(heroPost))}>
+              Read featured story
+            </a>
+          </aside>
+        ) : null
+      }
+    </div>
+
+    {
+      topicRail.length ? (
+        <nav class="home-hero__topics" aria-label="Popular topics">
+          <span class="home-hero__topics-label">Explore</span>
+          <ul>
+            {topicRail.map((topic) => (
+              <li>
+                <a href={hrefPath(`/topic/${topic.slug}/`)}>{formatCategoryLabel(topic.label)}</a>
+              </li>
+            ))}
+            <li>
+              <a class="home-hero__topics-all" href={hrefPath('/topics/')}>
+                All topics
+              </a>
+            </li>
+          </ul>
+        </nav>
+      ) : null
+    }
+  </div>
+</section>

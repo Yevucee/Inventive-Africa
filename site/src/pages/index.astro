@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeHero from '../components/HomeHero.astro';
 import LeadStory from '../components/LeadStory.astro';
 import StoryCard from '../components/StoryCard.astro';
 import {
@@ -10,7 +11,6 @@ import {
   sortPostsNewestFirst,
   getCategoryIndex,
 } from '../lib/posts';
-import { formatCategoryLabel } from '../lib/taxonomy';
 import { hrefPath } from '../lib/postPaths';
 import { readingTimeMinutes } from '../lib/readingTime';
 
@@ -24,7 +24,7 @@ const archiveHighlights = allPosts
   .slice(0, HOMEPAGE_RECENT_COUNT);
 
 const topics = getCategoryIndex(allPosts);
-const topicRail = topics.slice(0, 8);
+const topicRail = topics.slice(0, 6).map((t) => ({ slug: t.slug, label: t.label }));
 
 function bodyText(post: (typeof allPosts)[number]) {
   return post.body ?? '';
@@ -36,38 +36,16 @@ function bodyText(post: (typeof allPosts)[number]) {
   description="African innovation, technology, and inspiration — change is happening now."
   mainClass="home-page"
 >
-  <header class="home-masthead">
-    <p class="home-masthead__kicker">African innovation &amp; technology</p>
-    <h1 class="home-masthead__title">Change is happening now</h1>
-    <p class="home-masthead__dek">
-      In-depth stories on startups, digitalisation, and ideas from across the continent — curated from
-      the Inventive Africa archive.
-    </p>
-  </header>
+  <HomeHero
+    slot="full-bleed"
+    heroPost={hero}
+    topicRail={topicRail}
+    postCount={allPosts.length}
+    topicCount={topics.length}
+    readingMinutes={hero ? readingTimeMinutes(bodyText(hero)) : undefined}
+  />
 
-  {
-    topicRail.length ? (
-      <nav class="topic-rail" aria-label="Popular topics">
-        <span class="topic-rail__label">Topics</span>
-        <ul class="topic-rail__list">
-          {topicRail.map((topic) => (
-            <li>
-              <a href={hrefPath(`/topic/${topic.slug}/`)}>{formatCategoryLabel(topic.label)}</a>
-            </li>
-          ))}
-          <li class="topic-rail__more">
-            <a href={hrefPath('/topics/')}>All topics</a>
-          </li>
-        </ul>
-      </nav>
-    ) : null
-  }
-
-  {
-    hero ? (
-      <LeadStory post={hero} readingMinutes={readingTimeMinutes(bodyText(hero))} />
-    ) : null
-  }
+  {hero ? <LeadStory post={hero} readingMinutes={readingTimeMinutes(bodyText(hero))} /> : null}
 
   {
     secondaryFeatured.length ? (
