@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { postUrl } from '../lib/postPaths';
+import { hrefPath, postUrl } from '../lib/postPaths';
 
 export const prerender = true;
 
@@ -23,7 +23,7 @@ export const GET: APIRoute = async () => {
       id: post.id,
       title: post.data.title,
       description: post.data.description ?? '',
-      url: postUrl(post),
+      url: hrefPath(postUrl(post)),
       pubDate: post.data.pubDate.toISOString(),
       categories: post.data.categories,
       tags: post.data.tags,

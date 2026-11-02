@@ -1,5 +1,6 @@
 ---
 import { normalizeUploadSrc, uploadFileExists } from '../lib/media';
+import { hrefPath } from '../lib/postPaths';
 
 interface Props {
   src: string;
@@ -41,7 +42,7 @@ const showCaption = Boolean(caption?.trim());
   ) : (
     <figure class:list={['media-frame', `media-frame--${fit}`, className]}>
       <img
-        src={normalized}
+        src={hrefPath(normalized)}
         alt={alt}
         loading={loadMode}
         decoding="async"

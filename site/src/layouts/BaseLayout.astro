@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
+import { hrefPath } from '../lib/postPaths';
 
 interface Props {
   title?: string;
@@ -29,8 +30,8 @@ const pageTitle = title === 'Inventive Africa' ? title : `${title} · Inventive 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate" type="application/rss+xml" title="Inventive Africa" href="/rss.xml" />
+    <link rel="icon" type="image/svg+xml" href={hrefPath('/favicon.svg')} />
+    <link rel="alternate" type="application/rss+xml" title="Inventive Africa" href={hrefPath('/rss.xml')} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

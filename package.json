@@ -8,7 +8,9 @@
   "scripts": {
     "dev": "npm run dev --workspace=site",
     "build": "npm run build --workspace=site",
+    "build:pages": "PUBLIC_DEPLOY_TARGET=github-pages npm run build --workspace=site",
     "preview": "npm run preview --workspace=site",
+    "preview:pages": "PUBLIC_DEPLOY_TARGET=github-pages npm run preview --workspace=site",
     "migration:inventory": "node scripts/inventory-wxr.mjs",
     "migration:inventory-media": "node scripts/inventory-media.mjs",
     "migration:media": "node scripts/import-media.mjs",

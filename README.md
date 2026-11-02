@@ -43,6 +43,21 @@ npm run build
 See [docs/MIGRATION_INVENTORY.md](docs/MIGRATION_INVENTORY.md) for reconciliation steps.
 The raw export and media archive remain local. The repository contains only published posts, the published About page, and media referenced by those pages.
 
+## GitHub Pages preview (testing)
+
+Published via GitHub Actions to:
+
+**https://yevucee.github.io/Inventive-Africa/**
+
+Build locally the same way CI does:
+
+```bash
+npm run build:pages
+npm run preview:pages
+```
+
+WordPress and `inventiveafrica.com` remain unchanged; this URL is for preview only.
+
 ## Preservation rules
 
 - Preserve published articles, pages, titles, dates, authors, categories, tags, images, and useful metadata.

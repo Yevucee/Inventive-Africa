@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import StoryCard from '../../../../components/StoryCard.astro';
 import { postsInYearMonth } from '../../../../lib/posts';
+import { hrefPath } from '../../../../lib/postPaths';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -30,7 +31,7 @@ const heading = new Intl.DateTimeFormat('en-GB', {
 <BaseLayout title={`Archive · ${heading}`} description={`Articles published in ${heading}.`} mainClass="archive-page">
   <header class="page-header">
     <p class="eyebrow">
-      <a href="/archive/">Archive</a> / <a href={`/archive/${year}/`}>{year}</a>
+      <a href={hrefPath('/archive/')}>Archive</a> / <a href={hrefPath(`/archive/${year}/`)}>{year}</a>
     </p>
     <h1>{heading}</h1>
     <p class="lede">{posts.length} article{posts.length === 1 ? '' : 's'}.</p>

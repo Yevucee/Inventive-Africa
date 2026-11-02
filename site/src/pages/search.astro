@@ -36,7 +36,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   async function loadIndex() {
     statusEl.textContent = 'Loading search index…';
-    const response = await fetch('/search-index.json');
+    const response = await fetch(`${import.meta.env.BASE_URL}search-index.json`);
     const records = (await response.json()) as Array<SearchRecord & { body?: string }>;
     fuse = new Fuse(records, {
       keys: [

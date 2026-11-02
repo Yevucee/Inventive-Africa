@@ -1,13 +1,14 @@
 ---
+import { hrefPath } from '../lib/postPaths';
 import { SITE_LOGO_ALT, SITE_LOGO_SRC, SITE_TAGLINE } from '../lib/branding';
 ---
 
 <header class="site-header">
   <div class="site-header__bar wrap">
-    <a class="site-logo" href="/">
+    <a class="site-logo" href={hrefPath('/')}>
       <img
         class="site-logo__mark"
-        src={SITE_LOGO_SRC}
+        src={hrefPath(SITE_LOGO_SRC)}
         width="160"
         height="48"
         alt={SITE_LOGO_ALT}
@@ -17,12 +18,12 @@ import { SITE_LOGO_ALT, SITE_LOGO_SRC, SITE_TAGLINE } from '../lib/branding';
     </a>
     <nav class="site-header__nav" aria-label="Primary">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/articles/">Stories</a></li>
-        <li><a href="/topics/">Topics</a></li>
-        <li><a href="/archive/">Archive</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/search/">Search</a></li>
+        <li><a href={hrefPath('/')}>Home</a></li>
+        <li><a href={hrefPath('/articles/')}>Stories</a></li>
+        <li><a href={hrefPath('/topics/')}>Topics</a></li>
+        <li><a href={hrefPath('/archive/')}>Archive</a></li>
+        <li><a href={hrefPath('/about/')}>About</a></li>
+        <li><a href={hrefPath('/search/')}>Search</a></li>
       </ul>
     </nav>
   </div>

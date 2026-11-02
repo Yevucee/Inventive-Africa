@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { displayAuthor, featuredImageSrc } from '../lib/posts';
-import { formatDateShort, postUrl } from '../lib/postPaths';
+import { formatDateShort, hrefPath, postUrl } from '../lib/postPaths';
 import { categorySlug, formatCategoryLabel, visibleCategoryLabels } from '../lib/taxonomy';
 import MediaImage from './MediaImage.astro';
 
@@ -23,7 +23,7 @@ const imageFit = variant === 'list' ? 'cover' : 'cover';
 <article class:list={['story-card', `story-card--${variant}`]}>
   {
     showImage ? (
-      <a class="story-card__media" href={postUrl(post)} tabindex="-1" aria-hidden="true">
+      <a class="story-card__media" href={hrefPath(postUrl(post))} tabindex="-1" aria-hidden="true">
         <MediaImage
           src={image!}
           alt={post.data.featuredImageAlt || post.data.title}
@@ -38,7 +38,7 @@ const imageFit = variant === 'list' ? 'cover' : 'cover';
       topics.length ? (
         <p class="story-card__topics">
           {topics.map((category) => (
-            <a class="topic-link" href={`/topic/${categorySlug(category)}/`}>
+            <a class="topic-link" href={hrefPath(`/topic/${categorySlug(category)}/`)}>
               {formatCategoryLabel(category)}
             </a>
           ))}
@@ -46,7 +46,7 @@ const imageFit = variant === 'list' ? 'cover' : 'cover';
       ) : null
     }
     <Tag class="story-card__title">
-      <a href={postUrl(post)}>{post.data.title}</a>
+      <a href={hrefPath(postUrl(post))}>{post.data.title}</a>
     </Tag>
     {post.data.description ? <p class="story-card__dek">{post.data.description}</p> : null}
     <p class="story-meta">

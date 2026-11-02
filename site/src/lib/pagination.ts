@@ -1,3 +1,5 @@
+import { hrefPath } from './postPaths';
+
 export const ARCHIVE_PAGE_SIZE = 12;
 
 export function paginate<T>(items: T[], page: number, pageSize = ARCHIVE_PAGE_SIZE) {
@@ -14,9 +16,9 @@ export function paginate<T>(items: T[], page: number, pageSize = ARCHIVE_PAGE_SI
 }
 
 export function archivePageUrl(page: number) {
-  return page <= 1 ? '/articles/' : `/articles/page/${page}/`;
+  return hrefPath(page <= 1 ? '/articles/' : `/articles/page/${page}/`);
 }
 
 export function topicPageUrl(slug: string, page = 1) {
-  return page <= 1 ? `/topic/${slug}/` : `/topic/${slug}/page/${page}/`;
+  return hrefPath(page <= 1 ? `/topic/${slug}/` : `/topic/${slug}/page/${page}/`);
 }

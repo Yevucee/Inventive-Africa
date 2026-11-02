@@ -6,7 +6,7 @@ import MediaImage from '../components/MediaImage.astro';
 import ShareBar from '../components/ShareBar.astro';
 import StoryCard from '../components/StoryCard.astro';
 import { displayAuthor, relatedPosts } from '../lib/posts';
-import { absolutePostUrl, formatDate, postUrl } from '../lib/postPaths';
+import { absolutePostUrl, formatDate, hrefPath, postUrl } from '../lib/postPaths';
 import { categorySlug, formatCategoryLabel, visibleCategoryLabels } from '../lib/taxonomy';
 import { getCollection, render } from 'astro:content';
 
@@ -30,7 +30,7 @@ const canonical = absolutePostUrl(siteOrigin, entry);
 <BaseLayout
   title={entry.data.title}
   description={entry.data.description}
-  ogImage={entry.data.featuredImage ? new URL(entry.data.featuredImage, siteOrigin).href : undefined}
+  ogImage={entry.data.featuredImage ? new URL(hrefPath(entry.data.featuredImage), siteOrigin).href : undefined}
   canonicalUrl={canonical}
   mainClass="article-shell"
 >
@@ -40,7 +40,7 @@ const canonical = absolutePostUrl(siteOrigin, entry);
         visibleCategoryLabels(entry.data.categories).length ? (
           <p class="article__topics">
             {visibleCategoryLabels(entry.data.categories).map((category) => (
-              <a class="topic-link" href={`/topic/${categorySlug(category)}/`}>
+              <a class="topic-link" href={hrefPath(`/topic/${categorySlug(category)}/`)}>
                 {formatCategoryLabel(category)}
               </a>
             ))}

@@ -11,6 +11,7 @@ import {
   getCategoryIndex,
 } from '../lib/posts';
 import { formatCategoryLabel } from '../lib/taxonomy';
+import { hrefPath } from '../lib/postPaths';
 
 const allPosts = sortPostsNewestFirst(await getCollection('posts'));
 const hero = allPosts.find((post) => hasFeaturedImage(post)) ?? allPosts[0];
@@ -53,12 +54,12 @@ const spotlightTopics = topics.slice(0, 6);
       <section class="home-section" aria-labelledby="topics-heading">
         <header class="section-heading">
           <h2 id="topics-heading">Explore by topic</h2>
-          <a class="section-heading__more" href="/topics/">All topics</a>
+          <a class="section-heading__more" href={hrefPath('/topics/')}>All topics</a>
         </header>
         <ul class="topic-grid">
           {spotlightTopics.map((topic) => (
             <li>
-              <a class="topic-card" href={`/topic/${topic.slug}/`}>
+              <a class="topic-card" href={hrefPath(`/topic/${topic.slug}/`)}>
                 <span class="topic-card__label">{formatCategoryLabel(topic.label)}</span>
                 <span class="topic-card__count">{topic.count} stories</span>
               </a>
@@ -72,7 +73,7 @@ const spotlightTopics = topics.slice(0, 6);
   <section class="home-section" aria-labelledby="archive-heading">
     <header class="section-heading">
       <h2 id="archive-heading">More from the archive</h2>
-      <a class="section-heading__more" href="/articles/">Browse all stories</a>
+      <a class="section-heading__more" href={hrefPath('/articles/')}>Browse all stories</a>
     </header>
     <div class="home-recent-list">
       {archiveHighlights.map((post) => (
