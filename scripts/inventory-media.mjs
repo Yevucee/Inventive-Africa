@@ -21,7 +21,7 @@ let uploadPathCount = 0;
 for (const line of lines) {
   const ext = line.includes('.') ? line.split('.').pop().toLowerCase() : '(none)';
   extensions[ext] = (extensions[ext] ?? 0) + 1;
-  if (line.includes('wp-content/uploads')) uploadPathCount += 1;
+  if (line.includes('wp-content/uploads') || /^(?:\.\/)?\d{4}\/\d{2}\//.test(line)) uploadPathCount += 1;
 }
 
 const archiveStat = statSync(paths.mediaTar);

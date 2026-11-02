@@ -1,0 +1,27 @@
+---
+title: "Did You Know the African Youtube could inspire other innovators?"
+description: "How many ideas do you have? I have a lot, all the time, solving different problems, offering services for people, different tools and products. It is always a l"
+pubDate: 2017-12-19T13:08:47.000Z
+updatedDate: 2018-04-13T01:45:22.000Z
+author: "inventiveafrica"
+slug: "the-african-youtube-could-inspire-other-innovators"
+wpId: "9775"
+legacyUrl: "http://inventiveafrica.com/2017/12/19/the-african-youtube-could-inspire-other-innovators/"
+legacyPath: "/2017/12/19/the-african-youtube-could-inspire-other-innovators/"
+type: "post"
+categories: ["inspiration", "Products", "Projects"]
+tags: ["africa", "coding", "Ghana", "Innovation", "youtube"]
+featuredImage: "/wp-content/uploads/2017/12/mudclo-africa-coding.png"
+featuredImageAlt: ""
+---
+How many ideas do you have? I have a lot, all the time, solving different problems, offering services for people, different tools and products. It is always a little disheartening when I find that someone already had the idea, or that is has been created already and is quite advanced. But, last week I was sent a news clip by the inspirational [Edem Adzaho](/2017/08/18/it-takes-just-one-person-to-inspire-many/), who I was honoured to feature on Inventive Africa in May, about a Ghanaian that simply didn't care that his innovation existed already. His aim was to not just replicate it, but to make it better.
+
+![gabriel\_opare2.jpg](/wp-content/uploads/2017/12/gabriel_opare2.jpg) Gabriel Opare
+
+The challenge he set for himself was not a small task of over coming a new product, he decided that the might of Youtube needed to be improved on. So, he set to it. Maybe it was the exuberance of youth that gives him the edge over me and my disheartened moments, but 19 year old Gabriel Opare took on this challenge and is well on his way to succeeding. Gabriel doesn't even study computer programming, he is a Sociology student at my old university, the University of Ghana. He taught himself to code by taking online courses in his free time. [Mudclo](http://www.mudclo.com/#single-project) is a big story, and could one day compete with the likes of Youtube. It draws on the power of Youtube and other video search engines to give a comprehensive choice of content to it's users. This could also give better access to African content, and open up a more personalised video service for the continent.   ![mudco.png](/wp-content/uploads/2017/12/mudco.png) Currently, Mudclo is not online due to security reasons, but Mudclo isn't actually the biggest story here. Gabriel himself is a shining example of what can be achieved with self motivation, and effort. On Inventive Africa, we often preach about teaching Africa's youth to code, or at least making them aware of what is possible in the tech world. I even [helped set up a coding club with the help of Coderdojo and Airtel Ghana](/2017/05/11/you-can-create-the-next-generation-of-african-computer-coders/). We have also written about how students can now further their education online, and in many cases for free. There are [so many courses and MOOCs online](/2016/08/31/technology-is-changing-african-education/), that enable people all over the world to pick up new skills.
+
+[Watch video on YouTube](https://www.youtube.com/watch?v=zlCBxD3LHI4&w=747&h=418)
+
+This is Gabriel explaining his journey. (Ironically on Youtube!)
+
+Gabriel, obviously a bright chap, took these opportunities, and has been able to create something very impressive, which is likely to be the first of many innovations he is at the helm of. He did this, despite of people suggesting that there was no chance of competing with the likes of Youtube. Technology and innovation are exciting, and it is not difficult to get young people interested in coding and creating. With a little investment, the substantial youth in Africa can corner the coding market of the world, and talents like Gabriel can be creating the technology of the future, benefitting Africa and the world! If you know of any innovations in Africa, an innovation that is changing lives, inspiring individuals, or you also want to be a guest blogger, get in contact with us on Twitter **[@inventiveAfrica](http://www.twitter.com/inventiveafrica)** or via email. Please share the blog with your network on **[Twitter](https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&ref_src=twsrc%5Etfw&related=wordpressdotcom&text=Did%20You%20Know%20tech%20can%20unburden%20African%20girls%20at%20home%3F&tw_p=tweetbutton&url=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&via=InventiveAfrica)** and **[Facebook](https://www.facebook.com/sharer/sharer.php?app_id=249643311490&sdk=joey&u=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&display=popup&ref=plugin&src=share_button)**. Also, don’t forget to check out and like our **[Facebook page](https://www.facebook.com/Inventiveafrica/?fref=ts)!** For more interesting blogs about **[African Innovation, check out our homepage.](/)** If you enjoy reading Inventive Africa and want to support the upkeep of the blog you can donate at  [![You-can-now-accept-PayPal-through-eMerchantPay.png](/wp-content/uploads/2018/04/you-can-now-accept-paypal-through-emerchantpay.png)](http://paypal.me/InventiveAfrica). Thank you for your support!,

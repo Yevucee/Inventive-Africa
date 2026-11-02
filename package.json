@@ -11,6 +11,7 @@
     "preview": "npm run preview --workspace=site",
     "migration:inventory": "node scripts/inventory-wxr.mjs",
     "migration:inventory-media": "node scripts/inventory-media.mjs",
+    "migration:media": "node scripts/import-media.mjs",
     "migration:import": "node scripts/migrate-wxr.mjs",
     "migration:check": "node scripts/migration-check.mjs"
   }

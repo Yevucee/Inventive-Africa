@@ -1,0 +1,33 @@
+---
+title: "Did You Know African brains are helping African Brains?"
+description: "Health as an on going trend, which has run throughout Inventive Africa from the beginning. Innovation and technology has the ability to change lives in many way"
+pubDate: 2017-02-17T13:13:35.000Z
+updatedDate: 2017-02-20T02:24:57.000Z
+author: "inventiveafrica"
+slug: "did-you-know-african-brains-are-helping-african-brains"
+wpId: "6419"
+legacyUrl: "http://inventiveafrica.com/2017/02/17/did-you-know-african-brains-are-helping-african-brains/"
+legacyPath: "/2017/02/17/did-you-know-african-brains-are-helping-african-brains/"
+type: "post"
+categories: ["Digitalisation", "manufacture", "Products", "Projects"]
+tags: ["africa", "business", "health", "health care", "Innovation", "science", "tech", "technology"]
+featuredImage: "/wp-content/uploads/2017/02/mri-africa.png"
+featuredImageAlt: ""
+---
+Health as an on going trend, which has run throughout Inventive Africa from the beginning. Innovation and technology has the ability to change lives in many way and in the health sector it can improve them, and save them. [Mobile phones](/2016/09/19/did-you-know-you-dont-need-a-smartphone-in-africa/) are giving more people access to specialist treatment, [Uber style ambulances](/2016/10/24/mobile-apps-are-taking-over-africa/) are taking patients to hospital, and [solar power is creating a more reliable](/2017/02/06/solar-power-is-saving-lives-in-africa/) and safe setting for patience to be treated. Often, patients in Africa can not access treatment because of the sheer price of certain procedures.(although this problem is not exclusive to Africa!) It is not necessarily the price of the doctors time that is costly. Machinery, like MRI scanners come at a hefty price. In Uganda, just to use the MRI scanner, before all the treatment that may come after usage, costs more than Shs 700,000 (£156). For some, this is simply out of their reach. People who should be getting treatment, are not even going to the hospital. I here of shocking deaths in Africa, which come out of nowhere and inexplicable. Many of these, I can only assume, is because people didn't recognise their symptoms, and/or didn't want to go for treatment, because of expense.
+
+![Anaplastic\_astrocytoma.jpg](/wp-content/uploads/2017/02/anaplastic_astrocytoma.jpg) Tumours detected by MRI Scanner
+
+But, like many instances in Africa, when there is a problem, a solution is just around the corner. [Johnes Obungoloch](http://www.monitor.co.ug/artsculture/Reviews/Lecturer-develops-low-cost-brain-imaging-system/691232-3806408-8rme6sz/index.html), who lectures at Mbarara University of Science and Technology, found a way of bringing the cost down of MRI scanners, which will therefore pass on the saving to the patient. MRI scanners use strong magnetic fields and radio waves to produce detailed images of the inside of the body. They are expensive machinery due to the strong magnetic field, its technical and infrastructural requirements, and at 5 tonnes, their massive weight. By using ordinary copper wiring in his machine, and bringing the weight down to just 125 kgs, Obungoloch  believes he will be able to cut 90% off the price to use the machine. Local staff will be trained how to repair and maintain the machine, further cutting down on costs. It is not quite ready yet, and will be needed to be tested on animals at first, but it should be ready to go in the next 2 years, cutting medical bills for cancer patients and those with other internal problems, drastically.
+
+![mri.png](/wp-content/uploads/2017/02/mri.png) Obungoloch's MRI Scanner
+
+Health care innovation is vitally important in Africa. Specialists like Obungoloch need to join forces with other innovators to continue to boost health care technology in the continent. There are many problems that still need to be solves. Malaria, typhoid and other diseases still kill many across Africa. Yellow fever even made a come back last year. Like I said, there are many deaths that simply would not occur in other parts of the world. In South Africa, GE and Standard Bank have launched an [accelerator programme](http://www.itwebafrica.com/enterprise-solutions/501-south-africa/237338-standard-bank-ge-launch-healthcare-accelerator-at-africa-innovation-centre) for South African Healthcare Professionals and the African Innovation Centre in Johannesburg. The programme aims to equip healthcare professionals with technical, clinical and business skills, that will enable them to expand and better equip their practices. It is no coincidence that GE are involved in such a project. By working closely with health care professionals in South Africa, it is likely they are looking to gain knowledge and ideas out of this programme to enable them to innovate with African health care in mind. It also aims to make sure health care professionals are fully equipped to utilise health care technology that has been brought in from oversees.
+
+![ge standard bank launch.png](/wp-content/uploads/2017/02/ge-standard-bank-launch.png) The Health Accelerator Launch
+
+Africa still relies heavily on technology from outside the continent. Whilst accelerators like these should begin to help Africa develop their own solutions, they are also important for training. In many instances, new tech from oversees is brought in, but the professionals are not given adequate training. Machinery falls into disrepair without the proper maintenance procedures and patients go without an adequate service. By making sure technology and machinery are properly used and always functioning, this should also bring down the cost of health care.
+
+If you know of any health care innovations that are changing lives in Africa,  you would like to be a guest blogger, get in contact with us on Twitter **[@InventiveAfrica](https://inventiveafricadotnet.wordpress.com/mentions/inventiveafrica/)** or **[email](mailto:inventiveafrica1@gmail.com)**, and please also share the blog with your network on **[Twitter](https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&ref_src=twsrc%5Etfw&related=wordpressdotcom&text=Did%20You%20Know%20tech%20can%20unburden%20African%20girls%20at%20home%3F&tw_p=tweetbutton&url=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&via=InventiveAfrica)** and **[Facebook](https://www.facebook.com/sharer/sharer.php?app_id=249643311490&sdk=joey&u=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&display=popup&ref=plugin&src=share_button).**
+
+     ,

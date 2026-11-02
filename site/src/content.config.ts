@@ -14,6 +14,8 @@ const postFields = {
   type: z.enum(['post', 'page']).default('post'),
   categories: z.array(z.string()).default([]),
   tags: z.array(z.string()).default([]),
+  featuredImage: z.string().optional(),
+  featuredImageAlt: z.string().optional(),
 };
 
 const posts = defineCollection({

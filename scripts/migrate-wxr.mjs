@@ -2,6 +2,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import TurndownService from 'turndown';
 import { assertSourceFile, resolveMigrationPaths } from './lib/paths.mjs';
+import { attachmentMap, rewriteUploadUrls } from './lib/media.mjs';
 import {
   datePartsFromPubDate,
   parseWxrFile,
@@ -15,20 +16,26 @@ const paths = resolveMigrationPaths({
 assertSourceFile(paths.wxr, 'WordPress WXR export');
 
 const wxr = parseWxrFile(paths.wxr);
+const attachments = attachmentMap(wxr);
 const turndown = new TurndownService({
   headingStyle: 'atx',
   codeBlockStyle: 'fenced',
 });
 
 turndown.addRule('preserveFigure', {
-  filter: ['figure', 'figcaption'],
-  replacement: (content) => content,
+  filter: ['figure'],
+  replacement: (content) => `\n\n${content.trim()}\n\n`,
+});
+turndown.addRule('figureCaption', {
+  filter: ['figcaption'],
+  replacement: (content) => `\n\n*${content.trim()}*\n\n`,
 });
 
 const importable = wxr.items.filter(
   (item) =>
     item.status === 'publish' && (item.type === 'post' || item.type === 'page'),
 );
+const publishedPaths = new Set(importable.map((item) => permalinkPathFromLink(item.link, item.slug)));
 
 mkdirSync(paths.contentDir, { recursive: true });
 mkdirSync(paths.pagesDir, { recursive: true });
@@ -60,11 +67,22 @@ for (const item of importable) {
     });
   }
 
-  const body = turndown.turndown(item.contentHtml || item.excerptHtml || '');
+  const html = rewriteInternalLinks(
+    rewriteUploadUrls(
+      normaliseWordPressContent(item.contentHtml || item.excerptHtml || '', attachments),
+      paths.uploadsDir,
+    ),
+    publishedPaths,
+  );
+  const body = turndown.turndown(html).replaceAll('&amp;', '&').replace(/^> +$/gm, '>');
+  const featured = attachments.get(item.meta.get('_thumbnail_id'));
+  const featuredImage = featured
+    ? rewriteUploadUrls(featured.attachmentUrl, paths.uploadsDir)
+    : '';
   const frontmatter = [
     '---',
     `title: ${yamlString(item.title)}`,
-    `description: ${yamlString(stripHtml(item.excerptHtml).slice(0, 300))}`,
+    `description: ${yamlString(stripHtml(item.excerptHtml || item.contentHtml).replace(/\[[^\]]*\]/g, ' ').slice(0, 160))}`,
     `pubDate: ${dates.iso}`,
     `updatedDate: ${item.modified ? new Date(item.modified).toISOString() : dates.iso}`,
     `author: ${yamlString(item.creator || 'InventiveAfrica')}`,
@@ -75,6 +93,10 @@ for (const item of importable) {
     `type: ${yamlString(item.type)}`,
     `categories: ${yamlList(item.categories)}`,
     `tags: ${yamlList(item.tags)}`,
+    ...(featuredImage ? [
+      `featuredImage: ${yamlString(featuredImage)}`,
+      `featuredImageAlt: ${yamlString(featured.meta.get('_wp_attachment_image_alt') || '')}`,
+    ] : []),
     '---',
     '',
   ].join('\n');
@@ -111,4 +133,42 @@ function yamlList(values) {
 
 function stripHtml(html) {
   return String(html ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function normaliseWordPressContent(html, attachments) {
+  return String(html)
+    .replace(/\[contact-form[^\]]*\][\s\S]*?\[\/contact-form\]/g, '')
+    .replace(/\[contact-field[^\]]*\]/g, '')
+    .replace(/\[caption[^\]]*\]([\s\S]*?)\[\/caption\]/g, (_, content) => `<figure>${content}</figure>`)
+    .replace(/\[youtube\s+(https?:\/\/[^\]\s]+)[^\]]*\]/g, (_, url) =>
+      `<p><a href="${escapeHtml(url)}">Watch video on YouTube</a></p>`)
+    .replace(/\[gallery\s+[^\]]*ids=["']([^"']+)["'][^\]]*\]/g, (_, ids) =>
+      ids.split(',').map((id) => attachments.get(id.trim())).filter(Boolean)
+        .map((image) => `<figure><img src="${escapeHtml(image.attachmentUrl)}" alt="${escapeHtml(image.meta.get('_wp_attachment_image_alt') || '')}"></figure>`)
+        .join('\n'));
+}
+
+function escapeHtml(value) {
+  return String(value ?? '').replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
+}
+
+function rewriteInternalLinks(html, publishedPaths) {
+  const hosts = new Set([
+    'inventiveafrica.com',
+    'www.inventiveafrica.com',
+    'inventiveafrica.net',
+    'www.inventiveafrica.net',
+    'inventiveafricadotnet.wordpress.com',
+  ]);
+  return html.replace(/(<a\b[^>]*\bhref=["'])([^"']+)(["'])/gi, (whole, before, href, after) => {
+    try {
+      const url = new URL(href.replaceAll('&amp;', '&'));
+      if (!hosts.has(url.hostname)) return whole;
+      const pathname = url.pathname.endsWith('/') ? url.pathname : `${url.pathname}/`;
+      if (!publishedPaths.has(pathname) && pathname !== '/') return whole;
+      return `${before}${pathname}${url.search}${url.hash}${after}`;
+    } catch {
+      return whole;
+    }
+  });
 }

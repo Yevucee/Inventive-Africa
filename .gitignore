@@ -1,5 +1,5 @@
 # WordPress migration material stays local
-migration-source/
+migration-source
 exports/
 wordpress-export*.xml
 media-export*.tar

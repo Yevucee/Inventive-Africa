@@ -1,0 +1,33 @@
+---
+title: "Did You Know that an African borehole doesn't have to be expensive?"
+description: "Water water everywhere, and not any drop to drink. These were the words of an ancient mariner at sea. Even today, the importance of clean water cannot be unders"
+pubDate: 2016-11-16T13:24:17.000Z
+updatedDate: 2016-11-16T06:24:17.000Z
+author: "inventiveafrica"
+slug: "an-african-borehole-doesnt-have-to-be-expensive"
+wpId: "4602"
+legacyUrl: "http://inventiveafrica.com/2016/11/16/an-african-borehole-doesnt-have-to-be-expensive/"
+legacyPath: "/2016/11/16/an-african-borehole-doesnt-have-to-be-expensive/"
+type: "post"
+categories: ["Products", "Projects", "technology"]
+tags: ["africa", "bore hole", "development", "Innovation", "urban", "Water"]
+featuredImage: "/wp-content/uploads/2016/11/africa-ground-water.png"
+featuredImageAlt: ""
+---
+Water water everywhere, and not any drop to drink. These were the words of an ancient mariner at sea. Even today, the importance of clean water cannot be underscored enough. Political and economic self-determination in African states was supposed to be accompanied by the development of robust infrastructure for the delivery of essential services to citizens. Sadly, and perhaps unsurprisingly given the mayhem that has characterised the role of politics in Africa, many states remain underdeveloped in such service delivery infrastructures. Only 61% of the Sub-Saharan African population have access to “improved” water supply sources. And ‘improved’ does not necessarily mean “treated’ or ‘potable’ as far as the statistics are concerned. Basic dug-out wells still fall into the category of improved water sources by Sub Saharan African measures. In this region, at least 2200 children die each day from diarrhoeal diseases. Even more disappointing is the fact that some states have virtually failed to improve, let alone maintain the water treatment and reticulation infrastructure that was built in pre-independence years by colonial governments. Post-independence governments have presided over dilapidation and obsolescence of unprecedented levels.
+
+![dug wel africa.png](/wp-content/uploads/2016/11/dug-wel-africa.png) A well being dug
+
+Zimbabwe’s water infrastructure is becoming dilapidated at an alarming rate.  The past few years have witnessed a wave of health and educational institution closures due to total unavailability of both potable and sanitary water. Schools, universities, and more disappointingly, major state hospitals and clinics have been forced to cease operations. This has had disastrous effects on health care access and health outcomes, and represents a real regression in social and economic development. Industrial operations that are predominantly reliant on access to water, such as mining, have been negatively affected by the erratic water supply. It is a common sight in the metropolitan districts to see commercial bulk water tankers headed for domestic and industrial deliveries.
+
+![Water delivery Zimbabwe.png](/wp-content/uploads/2016/11/water-delivery-zimbabwe.png) FBL - Advert for bulk water delivery
+
+Inadequacy of water in Africa carries a negative bearing of the social perspective of gender-based underdevelopment. Studies have been conducted to quantify the opportunity cost of time spent by young girls and women in search of household water. Whatever the explanations for such service delivery failures, they can never seem to justify the critical state of water affairs. Boreholes could well be the answer. However, the cost of installing a fully automated residential borehole is prohibitive, extending to between US$3,000 and US$5,000, in a country where per capita income is possibly below US$1,000, and where the unemployment rates have soared staggeringly. [(For other water solutions in Africa see here)](/2016/10/19/there-is-enough-water-in-africa/)
+
+![borehole-drilling-zimbabwe](/wp-content/uploads/2016/11/borehole-drilling-zimbabwe.png) Borehole drilling by PrimeDrill in Zimbabwe
+
+Innovative companies with strong persuasions to formulate solutions and build businesses which change the way Africans live are coming up with simple, ingenious, inventive and resourceful methods of increasing access to potable water. A local start-up, PrimeDrill Water Services, wants to sink fully automated boreholes in urban communities. Their plumbing will terminate directly into the pre-existing water main delivery pipes within a residence, and usage will be regulated by means of a metered system. This allows the water authority to charge the household for water, and apportion a repayment to the PrimeDrill for the use of its infrastructure. It removes the expensive need for every household to sink a borehole. More interestingly, the boreholes are fully solar capable. The use of renewable energy is expected to enable the company to access infrastructure expansion finance from the world’s leading energy banks. Because by law, all water is vested in the state, the project is expected to work under a Build Operate Transfer (BOT) system which allows the state to eventually own the new water extraction and distribution infrastructure.
+
+![Water treatment urban africa.png](/wp-content/uploads/2016/11/water-treatment-urban-africa.png) A sketch of PrimeDrill engineering and plumbing schematic
+
+Peri urban and rural solutions are needed to complement the work of such start-ups and NGOs sinking manual boreholes. An equal, if not greater, focus is needed on providing quality sanitation and water to the most disadvantaged communities. PrimeDrill Water Services can be contacted on +263774605615 afriprime@gmail.com _We thank Donald T Madzika ([@madzikadt](https://twitter.com/madzikadt)) for supporting us with a blog about his view on the water situation and possible affordable borehole in Africa. Please feel free to contact us if you would like to be a guest blogger. If you have any comments Tweet us at **[@InventiveAfrica](https://inventiveafricadotnet.wordpress.com/mentions/inventiveafrica/)** and please also share the blog on **[Twitter](https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&ref_src=twsrc%5Etfw&related=wordpressdotcom&text=Did%20You%20Know%20tech%20can%20unburden%20African%20girls%20at%20home%3F&tw_p=tweetbutton&url=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&via=InventiveAfrica) and** **[Facebook](https://www.facebook.com/sharer/sharer.php?app_id=249643311490&sdk=joey&u=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&display=popup&ref=plugin&src=share_button).**_,

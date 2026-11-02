@@ -14,10 +14,6 @@ const posts = (await getCollection('posts')).sort(
 >
   <h1>Inventive Africa</h1>
   <p class="lede">Change is happening now. This preview site mirrors WordPress URL patterns for migrated articles.</p>
-  <p class="banner">
-    Migration preview: {posts.length} article{posts.length === 1 ? '' : 's'} loaded. Run
-    <code>npm run migration:import</code> locally after adding <code>migration-source/</code> to import the full export.
-  </p>
   <ul class="post-list">
     {
       posts.map((post) => (

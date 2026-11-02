@@ -1,0 +1,25 @@
+---
+title: "Did You Know Cow Insurance is changing African farmers family nutrition?"
+description: "It is hard to forget the images from the devastating drought in East Africa in the 1980's. LiveAid held its big concert to raise money for the victims of this e"
+pubDate: 2016-11-09T13:20:33.000Z
+updatedDate: 2016-11-10T02:28:09.000Z
+author: "inventiveafrica"
+slug: "did-you-know-cow-insurance-is-changing-african-farmers-family-nutrition"
+wpId: "4433"
+legacyUrl: "http://inventiveafrica.com/2016/11/09/did-you-know-cow-insurance-is-changing-african-farmers-family-nutrition/"
+legacyPath: "/2016/11/09/did-you-know-cow-insurance-is-changing-african-farmers-family-nutrition/"
+type: "post"
+categories: ["manufacture", "Products", "technology"]
+tags: ["africa", "agriculture", "business", "cows", "development", "Innovation", "insurance", "livestock"]
+featuredImage: "/wp-content/uploads/2016/11/cows-suffering-africa.png"
+featuredImageAlt: ""
+---
+It is hard to forget the images from the devastating drought in East Africa in the 1980's. LiveAid held its big concert to raise money for the victims of this enormous natural disaster and images flooded our TV's of emaciated Ethiopians, desperate for food and water. This is an image that Africa has been trying to shake for decades, but still drought persists. This year el Nino has taken a toll on East and southern Africa, with many countries once again facing the devastation of drought, if solutions are not found. Livestock farmers are among those most at risk from drought, as it becomes harder and harder for their cattle to find vegetation to feast on. Cattle have long been a currency of sorts in parts of the continent and to this day still represent wealth. [(Hence the popularity of CowFunding in South Africa)](/2016/08/22/south-african-cows-can-be-purchased-through-crowdfunding/) When a farmers animals die through starvation, it takes a long time to rebuild that wealth, if it ever can be rebuilt. Often it is more important than wealth as we saw in the 80's when so many people died due to drought.
+
+![Cattle in Kenya.png](/wp-content/uploads/2016/11/cattle-in-kenya.png) Cattle in Kenya -  (www.IBLI.ILRI.Org)
+
+At first thought, it seems that insuring against such a risk would be impossible. [Index-Based Livestock Insurance (IBLI)](https://ibli.ilri.org/), is doing exactly that, and in an innovative way! Their program uses satellite data to protect livestock herding communities in the Horn of Africa. By offering them insurance against the demise of their livestock, the communities are empowered and protected against the impact of climate change. By collecting satellite data, from the US National Oceanic and Atmospheric Administration (NOAA), every 10 days, a 'vegetation index is created'. This enables IBLI to track the density of vegetation in the areas that pastoralists graze their cattle. When the ability to forage vegetation for the cattle drops below a certain threshold, policy holders receive a payout. This threshold is a sign that drought has already taken hold in that region.  This is a clever way around actually calculating how many cattle have died. It is not like when you have a water leak in your house and you can calculate the amount of damage and how much the insurance payout should be to cover it. This tool enables a far wider group to have policies and for immediate action to be taken  if a drought is threatening the region.
+
+![IBLI payout ceremony.png](/wp-content/uploads/2016/11/ibli-payout-ceremony.png) Policy payout from IBLI (www.ibli.ilri.org)
+
+  So far, IBLI have been successful with this program in Kenya and Southern Ethiopia, with roughly 15,000 policies being sold. They have paid out over $200,000 since 2011 due to poor herding conditions. Behaviour of those that have policies have begun to change. They have found that they are less likely to sell off cattle at the first sign of drought and also there is less reduction of meals. Farmers are also investing more readily in veterinary services and therefore milk production is higher and family nutrition is better! A simple insurance scheme that changes behaviour and improves family life! Are there any other examples of innovative insurances in Africa? Please get in contact with us on Twitter [@InventiveAfrica](https://inventiveafricadotnet.wordpress.com/mentions/inventiveafrica/) and please also share the blog on **[Twitter](https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&ref_src=twsrc%5Etfw&related=wordpressdotcom&text=Did%20You%20Know%20tech%20can%20unburden%20African%20girls%20at%20home%3F&tw_p=tweetbutton&url=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&via=InventiveAfrica)** **and** **[Facebook](https://www.facebook.com/sharer/sharer.php?app_id=249643311490&sdk=joey&u=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&display=popup&ref=plugin&src=share_button).**            ,

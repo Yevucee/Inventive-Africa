@@ -7,7 +7,7 @@ Permanent redirects are required only when a public URL cannot be preserved exac
 | Content | WordPress pattern | Astro target |
 | --- | --- | --- |
 | Blog posts | `/{yyyy}/{mm}/{dd}/{slug}/` | Same path (trailing slash) |
-| Static pages | `/{slug}/` | TBD per page after import |
+| Static pages | `/{slug}/` | Same path (trailing slash) |
 | Categories | `/category/{slug}/` | Planned listing routes |
 | Authors | `/author/{slug}/` | Planned author pages |
 | Feeds | `/feed/` | Out of scope until launch decision |
@@ -19,4 +19,4 @@ Permanent redirects are required only when a public URL cannot be preserved exac
 - [ ] `/about/` and other pages matched or redirected
 - [ ] No competing public index while WordPress remains live (preview on non-production host only)
 
-Generated redirect list: run `npm run migration:import` locally, then commit only this documentation — not `docs/generated/`.
+The local import of the 2026-11-02 export proposed zero redirects for the 231 posts and 1 page. Generated redirect list: run `npm run migration:import` locally, then commit only this documentation — not `docs/generated/`.

@@ -1,0 +1,23 @@
+---
+title: "Did you know that Angola and Switzerland together are launching three incubator hubs?"
+description: "Yesterday when I searched the web for interesting projects happening in Africa I came across an interview with Emeka Okafor, a Venture Catalyst and Entrepreneur"
+pubDate: 2015-10-15T08:58:14.000Z
+updatedDate: 2015-12-07T06:10:35.000Z
+author: "inventiveafrica"
+slug: "did-you-know-that-angola-and-switzerland-together-are-launching-three-incubator-hubs"
+wpId: "12"
+legacyUrl: "http://inventiveafrica.com/2015/10/15/did-you-know-that-angola-and-switzerland-together-are-launching-three-incubator-hubs/"
+legacyPath: "/2015/10/15/did-you-know-that-angola-and-switzerland-together-are-launching-three-incubator-hubs/"
+type: "post"
+categories: ["Uncategorized"]
+tags: ["Angola", "Innovation", "Switzerland"]
+---
+Yesterday when I searched the web for interesting projects happening in Africa I came across an interview with Emeka Okafor, a Venture Catalyst and Entrepreneur whose past and current projects include Maker Faire Africa, Serengeti Tea, Africa Innovation Foundation, TED Fellows and the X Prize Foundation. His insights and initiatives are said to be at the forefront of emergent systems, maker innovation incubation and the creative industries. The [article](http://www.newsusa.com/articles/article/a-novel-innovation-hub-for-africa.aspx) I found states that "on April 13, 2015 Angola's Sovereign Wealth Fund announced the launch of five Investment Funds, targeting economic and social development in Sub-Saharan Africa. These will be accompanied by the establishment of a commercial vehicle to set up micro-business incubators for Angolan entrepreneurs". In other words: Angola is planning its own innovation or incubator hubs. The article continues:
+
+> The inspirations for these projects include the Brooklyn Navy Yard and Media Lab in the United States and African projects like Gearbox (Kenya) and AMP (Ghana). Three targeted platforms -- African Accelerator Markets, 'Sopa de Sabão' Culture Hub and Cabinda Port Tech Hub & Prototyping Lab -- will deliver cultural, economic, social and technology goods and services that capitalize on human capacities and capacity building. The 'Sopa de Sabão' Culture Hub will be supported by the Swiss-based African Innovation Foundation.
+
+The [African Innovation Foundation](http://www.africaninnovation.org) is also the driver behind the [Innovation Prize for Africa](http://innovationprizeforafrica.org). I didn't know that Switzerland is playing such an important role for the African innovation system. Who would have thought that a country famous for its cuckoo clock and chocolate would play such a role in Africa? The article continues with an interview:
+
+> Project director and curator Emeka Okafor is enthusiastic about the possibilities this project can offer for economic development and peace in Angola. Q: Mr. Okafor, why are you so enthusiastic about this project? A: The intention is to create interlocking innovation hubs that will harness innovation, creativity and the existing entrepreneurial ability within Angola. We will bring in the best practices with high impact, adapt them to the local environment and create the basis for what will be the leading example for an African creative innovation hub. Our vision is to help unfold Africa's innovation potential and to contribute to peace and stability through prosperity and best business practices. Q: What is the current status of the project? A: We are in the process of launching a management company that will provide advice and support to all teams involved with the development of the three different incubators, which will be deeply engaged with their surrounding local communities. We are going to open up opportunities for people and accelerate the incubation of new ventures. Another objective is to diversify the economy in Angola by using non-conventional manners. Q: What does that mean? A: We will bring in experiences from outside Angola, look at what is on the ground already and then blend these approaches with what we think can work in Angola. It is going to be bottom-up. We are looking to build something that nobody ever before has built in Angola. Q: Your plans sound very positive but are they also realistic? A: Similar projects have been successful in the past, in the United States as well as in Africa. We studied the success stories of 'Maker' type projects of various scales internationally and across Africa to combine the best lessons of these projects as guidelines for this new venture.
+
+It will be interesting to watch the development of these incubator hubs. Unfortunately I couldn't find any more recent information.,

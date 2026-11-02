@@ -1,0 +1,29 @@
+---
+title: "Did You Know Malawi is getting smart about trash?"
+description: "Many people who have had the opportunity to travel to Malawi, may be familiar with its beautiful lake and yellow sandy beaches. On the other hand, others may kn"
+pubDate: 2017-01-23T13:08:31.000Z
+updatedDate: 2017-01-23T07:44:53.000Z
+author: "inventiveafrica"
+slug: "malawi-is-getting-smart-about-trash"
+wpId: "5953"
+legacyUrl: "http://inventiveafrica.com/2017/01/23/malawi-is-getting-smart-about-trash/"
+legacyPath: "/2017/01/23/malawi-is-getting-smart-about-trash/"
+type: "post"
+categories: ["Projects"]
+tags: ["afric", "Innovation", "malawi", "Mobile", "tech", "technology", "trash", "waste"]
+featuredImage: "/wp-content/uploads/2017/01/trash-malawi.png"
+featuredImageAlt: ""
+---
+Many people who have had the opportunity to travel to Malawi, may be familiar with its beautiful lake and yellow sandy beaches. On the other hand, others may know it for its less flattering side, which includes it being amongst the poorest nations on the planet. Technologically, one may presume this is what explains the many strides Malawi is yet to take in catching up with the rest of the world. However, if you have a chance to meet Malawi’s growing generation of innovators, you will be surprised that they are trying to fix some of the problems that existed even before they were born.
+
+![malawi 2.jpg](/wp-content/uploads/2017/01/malawi-2.jpg) Waste is a problem in Malawi and across the continent
+
+One such innovator, Samson Fiado, an award winning ICT practitioner who just graduated from the University of Malawi. He just created the prototype of a system that aims to solve the problem of waste in Malawi’s streets. The system he designed is called “EasyBin Smart Waste Bin System” (or just EasyBin). Samson stated that he created this innovation because solid waste management is a problem that could be handled better in some of Malawi’s cities. He added that in addition to disturbing the balance of the environment, waste also has adverse effects on the health and of society and the economy. The current waste management system requires manual checking of whether the bins are full or not. Therefore Samson thought about how to make the existing system better and more efficient. So, how does it work? In essence, the system alerts relevant personnel on the levels of waste in the waste bins via a mobile phone and/or a monitoring centre. The integration of technology into waste management would not only make for efficiency but also interactivity, collection and analysis of city waste disposal data. Such data could help identify which areas require more bins or higher frequency of pick ups due to constant overflowing of waste. Samson adds that the system can be also of crucial importance especially in hospitals, residential areas and even offices.
+
+![malawi 1.jpg](/wp-content/uploads/2017/01/malawi-1.jpg) Samson and his invention
+
+Developing this solution was not without its challenges. Coming from an information communication technology background and not mechatronics, this created the need for Samson to circumnavigate the complexities himself. Electronics, mechanics as well as sensor and micro controller technology and integration, all make up different components of the system. Couple that with the difficulty of finding relevant study data from city assembly offices and you realise that the task is complex. Sadly, as exciting as all this sounds, this is currently only a prototype. Here in lies the challenge, not uncommon in these here parts (read “Malawi”). Innovators are rife with amazing ideas that they are enthusiastic about implementing but the challenge is often funding.
+
+![malawi 4.jpg](/wp-content/uploads/2017/01/malawi-4.jpg) Part of Samson's waste management system
+
+The great thing about innovators and inventors like Samson is, they first turn a blind eye to what they do not have, and just do the very best they can with what they do have. On reflection on this innovation, this system in theory, would not only detect, monitor and manage waste and make for more efficiency but also save the city millions of funds because of such efficiency. One can only hope that one day he gets enough resources and support to get this system working on Malawi’s streets… or even across the continent. However, for what it’s worth, having started is always better than not. _On Inventive Africa, we like to feature all kinds of innovations. That this particular waste management system has yet to receive funding, means it is even more important for it to be featured! There are important innovations across the continent that are going unnoticed. More platforms need to talk about the little guy with the big idea and promote African Innovation to the fullest! If you have an Innovation that you would like featured on Inventive Africa, contact us via [email](mailto:inventiveafrica1@gmail.com), or on twitter [@InventiveAfrica](https://twitter.com/inventiveafrica)._ _Thank you to Invest Malawi (@InvestMalawi1) for providing this blog about another great innovation. It goes to show that no matter the African country, great innovations are being created! If you liked this blog, or any other blog _on Inventive Africa_, please also share the blog with your network on **[Twitter](https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&ref_src=twsrc%5Etfw&related=wordpressdotcom&text=Did%20You%20Know%20tech%20can%20unburden%20African%20girls%20at%20home%3F&tw_p=tweetbutton&url=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&via=InventiveAfrica)** and **[Facebook](https://www.facebook.com/sharer/sharer.php?app_id=249643311490&sdk=joey&u=https%3A%2F%2Finventiveafrica.net%2F2016%2F10%2F12%2Ftech-can-unburden-african-girls-at-home%2F&display=popup&ref=plugin&src=share_button).**_,

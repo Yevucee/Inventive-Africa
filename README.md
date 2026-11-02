@@ -34,12 +34,14 @@ Then run:
 ```bash
 npm run migration:inventory
 npm run migration:inventory-media
+npm run migration:media
 npm run migration:import
 npm run migration:check
 npm run build
 ```
 
 See [docs/MIGRATION_INVENTORY.md](docs/MIGRATION_INVENTORY.md) for reconciliation steps.
+The raw export and media archive remain local. The repository contains only published posts, the published About page, and media referenced by those pages.
 
 ## Preservation rules
 

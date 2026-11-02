@@ -134,15 +134,15 @@ nav a:focus-visible {
   font-size: 0.85rem;
 }
 
-.prose :global(h2) {
+.prose h2 {
   margin-top: 2rem;
 }
 
-.prose :global(a) {
+.prose a {
   color: var(--accent);
 }
 
-.prose :global(img) {
+.prose img {
   max-width: 100%;
   height: auto;
 }
