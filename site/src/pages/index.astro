@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { formatDate, postUrl } from '../lib/postPaths';
+
+const posts = (await getCollection('posts')).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+---
+
+<BaseLayout
+  title="Inventive Africa — Articles"
+  description="African innovation, technology, and inspiration."
+>
+  <h1>Inventive Africa</h1>
+  <p class="lede">Change is happening now. This preview site mirrors WordPress URL patterns for migrated articles.</p>
+  <p class="banner">
+    Migration preview: {posts.length} article{posts.length === 1 ? '' : 's'} loaded. Run
+    <code>npm run migration:import</code> locally after adding <code>migration-source/</code> to import the full export.
+  </p>
+  <ul class="post-list">
+    {
+      posts.map((post) => (
+        <li>
+          <a href={postUrl(post)}>
+            <p class="meta">
+              <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+              · {post.data.author}
+            </p>
+            <h2>{post.data.title}</h2>
+            {post.data.description ? <p>{post.data.description}</p> : null}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

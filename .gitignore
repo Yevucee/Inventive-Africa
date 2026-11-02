@@ -5,6 +5,9 @@ wordpress-export*.xml
 media-export*.tar
 media-export*.zip
 
+# Generated migration reports (reproduce locally)
+docs/generated/
+
 # Local configuration and build output
 .env
 .env.*
@@ -13,3 +16,7 @@ node_modules/
 dist/
 .astro/
 .DS_Store
+
+# Site build output
+site/dist/
+site/.astro/

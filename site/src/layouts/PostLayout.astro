@@ -1,0 +1,45 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { formatDate } from '../lib/postPaths';
+
+interface Props {
+  title: string;
+  description?: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  author: string;
+  categories: string[];
+}
+
+const { title, description, pubDate, updatedDate, author, categories } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="post">
+    <header>
+      <h1>{title}</h1>
+      <p class="meta">
+        <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+        · <span>{author}</span>
+        {categories.length ? (
+          <>
+            {' '}
+            ·{' '}
+            {categories.map((category) => (
+              <span class="chip">{category}</span>
+            ))}
+          </>
+        ) : null}
+      </p>
+      {updatedDate && updatedDate.getTime() !== pubDate.getTime() ? (
+        <p class="meta subtle">
+          Updated{' '}
+          <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time>
+        </p>
+      ) : null}
+    </header>
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+import type { Props as AstroProps } from 'astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Inventive Africa', description = 'Change is happening now' } =
+  Astro.props as Props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/">Inventive Africa</a>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="/">Articles</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <slot />
+    </main>
+    <footer class="site-footer wrap">
+      <p>Preview build — WordPress remains the live site until launch is approved.</p>
+    </footer>
+  </body>
+</html>
