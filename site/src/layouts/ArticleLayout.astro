@@ -8,6 +8,7 @@ import StoryCard from '../components/StoryCard.astro';
 import { displayAuthor, relatedPosts } from '../lib/posts';
 import { absolutePostUrl, formatDate, hrefPath, postUrl } from '../lib/postPaths';
 import { categorySlug, formatCategoryLabel, visibleCategoryLabels } from '../lib/taxonomy';
+import { readingTimeMinutes, formatReadingTime } from '../lib/readingTime';
 import { getCollection, render } from 'astro:content';
 
 interface Props {
@@ -15,6 +16,8 @@ interface Props {
 }
 
 const { entry } = Astro.props;
+const readMinutes = readingTimeMinutes(entry.body ?? '');
+const readLabel = formatReadingTime(readMinutes);
 const allPosts = await getCollection('posts');
 const related = relatedPosts(entry, allPosts, 4);
 const { Content } = await render(entry, {
@@ -52,6 +55,8 @@ const canonical = absolutePostUrl(siteOrigin, entry);
       <p class="article__meta">
         Published{' '}
         <time datetime={entry.data.pubDate.toISOString()}>{formatDate(entry.data.pubDate)}</time>
+        <span aria-hidden="true">·</span>
+        <span>{readLabel}</span>
         <span aria-hidden="true">·</span>
         <span>{displayAuthor(entry.data.author)}</span>
       </p>
