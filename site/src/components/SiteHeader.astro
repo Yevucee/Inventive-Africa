@@ -13,8 +13,13 @@ const navTopics = topics.filter((t) => t.label !== 'Uncategorized').slice(0, TOP
   <div class="site-header__inner wrap">
     <div class="site-header__brand-row">
       <a class="masthead" href="/">
-        <span class="masthead__title">Inventive Africa</span>
-        <span class="masthead__tagline">Change is happening now</span>
+        <span class="masthead__mark" aria-hidden="true">
+          <img src="/wp-content/uploads/2017/11/inventive-africa-square.jpg" alt="" />
+        </span>
+        <span class="masthead__copy">
+          <span class="masthead__title">Inventive Africa</span>
+          <span class="masthead__tagline">Change is happening now</span>
+        </span>
       </a>
       <div class="site-header__utilities">
         <button

@@ -16,6 +16,7 @@ const { post, variant = 'list', headingLevel = 'h2', hideImage = false } = Astro
 const Tag = headingLevel;
 const image = featuredImageSrc(post);
 const showImage = !hideImage && image;
+const visibleCategories = post.data.categories.filter((category) => category !== 'Uncategorized').slice(0, 2);
 ---
 
 <article class:list={['story-card', `story-card--${variant}`]}>
@@ -28,9 +29,9 @@ const showImage = !hideImage && image;
   }
   <div class="story-card__body">
     {
-      post.data.categories.length ? (
+      visibleCategories.length ? (
         <p class="story-card__topics">
-          {post.data.categories.slice(0, 2).map((category) => (
+          {visibleCategories.map((category) => (
             <a class="topic-pill" href={`/topic/${categorySlug(category)}/`}>
               {category}
             </a>

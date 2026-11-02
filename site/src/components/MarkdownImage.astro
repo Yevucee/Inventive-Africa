@@ -16,14 +16,12 @@ const missing = normalized.startsWith('/wp-content/uploads/') && !uploadFileExis
           This image was referenced in the WordPress article but is not present in the migrated media archive.
         </span>
       </div>
-      {alt ? <figcaption>{alt}</figcaption> : null}
     </figure>
   ) : normalized.startsWith('/wp-content/uploads/') ? (
     <MediaImage src={normalized} alt={alt} class="prose-media" />
   ) : (
     <figure class="media-frame prose-media">
       <img src={src} alt={alt ?? ''} loading="lazy" decoding="async" />
-      {alt ? <figcaption>{alt}</figcaption> : null}
     </figure>
   )
 }
