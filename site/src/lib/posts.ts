@@ -1,5 +1,5 @@
 import type { CollectionEntry } from 'astro:content';
-import { categorySlug } from './taxonomy';
+import { categorySlug, visibleCategoryLabels } from './taxonomy';
 
 export type PostEntry = CollectionEntry<'posts'>;
 
@@ -23,10 +23,8 @@ export function featuredImageSrc(post: PostEntry) {
 export function getCategoryIndex(posts: PostEntry[]) {
   const counts = new Map<string, number>();
   for (const post of posts) {
-    for (const category of post.data.categories) {
-      const label = category.trim();
-      if (!label) continue;
-      counts.set(label, (counts.get(label) ?? 0) + 1);
+    for (const category of visibleCategoryLabels(post.data.categories)) {
+      counts.set(category, (counts.get(category) ?? 0) + 1);
     }
   }
   return [...counts.entries()]

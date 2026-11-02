@@ -7,7 +7,7 @@ import ShareBar from '../components/ShareBar.astro';
 import StoryCard from '../components/StoryCard.astro';
 import { displayAuthor, relatedPosts } from '../lib/posts';
 import { absolutePostUrl, formatDate, postUrl } from '../lib/postPaths';
-import { categorySlug } from '../lib/taxonomy';
+import { categorySlug, formatCategoryLabel, visibleCategoryLabels } from '../lib/taxonomy';
 import { getCollection, render } from 'astro:content';
 
 interface Props {
@@ -37,11 +37,11 @@ const canonical = absolutePostUrl(siteOrigin, entry);
   <article class="article">
     <header class="article__header">
       {
-        entry.data.categories.length ? (
+        visibleCategoryLabels(entry.data.categories).length ? (
           <p class="article__topics">
-            {entry.data.categories.map((category) => (
-              <a class="topic-pill" href={`/topic/${categorySlug(category)}/`}>
-                {category}
+            {visibleCategoryLabels(entry.data.categories).map((category) => (
+              <a class="topic-link" href={`/topic/${categorySlug(category)}/`}>
+                {formatCategoryLabel(category)}
               </a>
             ))}
           </p>
@@ -74,7 +74,9 @@ const canonical = absolutePostUrl(siteOrigin, entry);
           <MediaImage
             src={entry.data.featuredImage}
             alt={entry.data.featuredImageAlt || entry.data.title}
+            fit="contain"
             priority={true}
+            class="article__hero-image"
           />
         </div>
       ) : null
@@ -107,7 +109,7 @@ const canonical = absolutePostUrl(siteOrigin, entry);
           <h2 id="related-heading" class="section-label">Related stories</h2>
           <div class="related__grid">
             {related.map((post) => (
-              <StoryCard post={post} variant="compact" headingLevel="h3" />
+              <StoryCard post={post} variant="feature" headingLevel="h3" />
             ))}
           </div>
         </section>

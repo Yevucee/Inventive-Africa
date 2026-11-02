@@ -5,6 +5,7 @@ import Pagination from '../../../components/Pagination.astro';
 import StoryCard from '../../../components/StoryCard.astro';
 import { getCategoryIndex, postsInCategory, sortPostsNewestFirst } from '../../../lib/posts';
 import { paginate, topicPageUrl } from '../../../lib/pagination';
+import { formatCategoryLabel } from '../../../lib/taxonomy';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -25,7 +26,7 @@ const { items, currentPage, totalPages } = paginate(posts, 1);
 >
   <header class="page-header">
     <p class="eyebrow">Topic</p>
-    <h1>{label}</h1>
+    <h1>{formatCategoryLabel(label)}</h1>
     <p class="lede">{posts.length} article{posts.length === 1 ? '' : 's'} in this category.</p>
   </header>
   <div class="archive-list">

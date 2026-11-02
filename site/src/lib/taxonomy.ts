@@ -1,3 +1,5 @@
+export const HIDDEN_EDITORIAL_CATEGORIES = new Set(['uncategorized', '']);
+
 const SLUG_OVERRIDES: Record<string, string> = {
   uncategorized: 'uncategorized',
   digitalisation: 'digitalisation',
@@ -23,3 +25,18 @@ export function categoryLabelFromSlug(slug: string, knownLabels: string[]): stri
 }
 
 export const TOPIC_NAV_LIMIT = 8;
+
+export function isHiddenCategory(label: string): boolean {
+  return HIDDEN_EDITORIAL_CATEGORIES.has(label.trim().toLowerCase());
+}
+
+export function formatCategoryLabel(label: string): string {
+  const trimmed = label.trim();
+  if (!trimmed) return '';
+  if (trimmed === 'Digitalisation') return trimmed;
+  return trimmed.charAt(0).toUpperCase() + trimmed.slice(1);
+}
+
+export function visibleCategoryLabels(categories: string[]): string[] {
+  return categories.filter((label) => !isHiddenCategory(label));
+}

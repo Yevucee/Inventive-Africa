@@ -18,10 +18,10 @@ const missing = normalized.startsWith('/wp-content/uploads/') && !uploadFileExis
       </div>
     </figure>
   ) : normalized.startsWith('/wp-content/uploads/') ? (
-    <MediaImage src={normalized} alt={alt} class="prose-media" />
+    <MediaImage src={normalized} alt={alt ?? ''} fit="contain" class="prose-media" />
   ) : (
-    <figure class="media-frame prose-media">
-      <img src={src} alt={alt ?? ''} loading="lazy" decoding="async" />
+    <figure class="media-frame media-frame--contain prose-media">
+      <img src={src} alt={alt ?? ''} loading="lazy" decoding="async" class="media-frame__img media-frame__img--contain" />
     </figure>
   )
 }

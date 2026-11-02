@@ -2,12 +2,12 @@
 import type { CollectionEntry } from 'astro:content';
 import { displayAuthor, featuredImageSrc } from '../lib/posts';
 import { formatDateShort, postUrl } from '../lib/postPaths';
-import { categorySlug } from '../lib/taxonomy';
+import { categorySlug, formatCategoryLabel, visibleCategoryLabels } from '../lib/taxonomy';
 import MediaImage from './MediaImage.astro';
 
 interface Props {
   post: CollectionEntry<'posts'>;
-  variant?: 'hero' | 'feature' | 'compact' | 'list';
+  variant?: 'feature' | 'compact' | 'list';
   headingLevel?: 'h2' | 'h3';
   hideImage?: boolean;
 }
@@ -16,24 +16,30 @@ const { post, variant = 'list', headingLevel = 'h2', hideImage = false } = Astro
 const Tag = headingLevel;
 const image = featuredImageSrc(post);
 const showImage = !hideImage && image;
-const visibleCategories = post.data.categories.filter((category) => category !== 'Uncategorized').slice(0, 2);
+const topics = visibleCategoryLabels(post.data.categories).slice(0, 2);
+const imageFit = variant === 'list' ? 'cover' : 'cover';
 ---
 
 <article class:list={['story-card', `story-card--${variant}`]}>
   {
     showImage ? (
       <a class="story-card__media" href={postUrl(post)} tabindex="-1" aria-hidden="true">
-        <MediaImage src={image!} alt={post.data.featuredImageAlt || post.data.title} priority={variant === 'hero'} />
+        <MediaImage
+          src={image!}
+          alt={post.data.featuredImageAlt || post.data.title}
+          fit={imageFit}
+          priority={false}
+        />
       </a>
     ) : null
   }
   <div class="story-card__body">
     {
-      visibleCategories.length ? (
+      topics.length ? (
         <p class="story-card__topics">
-          {visibleCategories.map((category) => (
-            <a class="topic-pill" href={`/topic/${categorySlug(category)}/`}>
-              {category}
+          {topics.map((category) => (
+            <a class="topic-link" href={`/topic/${categorySlug(category)}/`}>
+              {formatCategoryLabel(category)}
             </a>
           ))}
         </p>
@@ -43,7 +49,7 @@ const visibleCategories = post.data.categories.filter((category) => category !==
       <a href={postUrl(post)}>{post.data.title}</a>
     </Tag>
     {post.data.description ? <p class="story-card__dek">{post.data.description}</p> : null}
-    <p class="story-card__meta">
+    <p class="story-meta">
       <time datetime={post.data.pubDate.toISOString()}>{formatDateShort(post.data.pubDate)}</time>
       <span aria-hidden="true">·</span>
       <span>{displayAuthor(post.data.author)}</span>

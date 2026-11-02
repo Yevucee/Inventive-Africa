@@ -1,0 +1,53 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { displayAuthor, featuredImageSrc } from '../lib/posts';
+import { formatDateShort, postUrl } from '../lib/postPaths';
+import { categorySlug, formatCategoryLabel, visibleCategoryLabels } from '../lib/taxonomy';
+import MediaImage from './MediaImage.astro';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const image = featuredImageSrc(post);
+const topics = visibleCategoryLabels(post.data.categories).slice(0, 2);
+---
+
+<article class="lead-story" aria-labelledby="lead-story-title">
+  {
+    image ? (
+      <a class="lead-story__media" href={postUrl(post)} tabindex="-1" aria-hidden="true">
+        <MediaImage
+          src={image}
+          alt={post.data.featuredImageAlt || post.data.title}
+          fit="contain"
+          priority={true}
+          class="lead-story__image"
+        />
+      </a>
+    ) : null
+  }
+  <div class="lead-story__panel">
+    {
+      topics.length ? (
+        <p class="lead-story__topics">
+          {topics.map((category) => (
+            <a class="topic-link" href={`/topic/${categorySlug(category)}/`}>
+              {formatCategoryLabel(category)}
+            </a>
+          ))}
+        </p>
+      ) : null
+    }
+    <h1 id="lead-story-title" class="lead-story__title">
+      <a href={postUrl(post)}>{post.data.title}</a>
+    </h1>
+    {post.data.description ? <p class="lead-story__dek">{post.data.description}</p> : null}
+    <p class="story-meta">
+      <time datetime={post.data.pubDate.toISOString()}>{formatDateShort(post.data.pubDate)}</time>
+      <span aria-hidden="true">·</span>
+      <span>{displayAuthor(post.data.author)}</span>
+    </p>
+  </div>
+</article>

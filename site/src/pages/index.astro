@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Pagination from '../components/Pagination.astro';
+import LeadStory from '../components/LeadStory.astro';
 import StoryCard from '../components/StoryCard.astro';
 import {
   HOMEPAGE_RECENT_COUNT,
@@ -10,19 +10,19 @@ import {
   sortPostsNewestFirst,
   getCategoryIndex,
 } from '../lib/posts';
-import { categorySlug } from '../lib/taxonomy';
+import { formatCategoryLabel } from '../lib/taxonomy';
 
 const allPosts = sortPostsNewestFirst(await getCollection('posts'));
 const hero = allPosts.find((post) => hasFeaturedImage(post)) ?? allPosts[0];
 const secondaryPool = allPosts.filter((post) => post.id !== hero?.id && hasFeaturedImage(post));
 const secondaryFeatured = secondaryPool.slice(0, HOMEPAGE_SECONDARY_FEATURED);
 const secondaryIds = new Set(secondaryFeatured.map((p) => p.id));
-const recent = allPosts
+const archiveHighlights = allPosts
   .filter((post) => post.id !== hero?.id && !secondaryIds.has(post.id))
   .slice(0, HOMEPAGE_RECENT_COUNT);
 
-const topics = getCategoryIndex(allPosts).filter((topic) => topic.label !== 'Uncategorized');
-const spotlightTopics = topics.slice(0, 4);
+const topics = getCategoryIndex(allPosts);
+const spotlightTopics = topics.slice(0, 6);
 ---
 
 <BaseLayout
@@ -30,22 +30,15 @@ const spotlightTopics = topics.slice(0, 4);
   description="African innovation, technology, and inspiration — change is happening now."
   mainClass="home-page"
 >
-  <section class="home-hero" aria-labelledby="hero-heading">
-    {
-      hero ? (
-        <StoryCard post={hero} variant="hero" headingLevel="h1" />
-      ) : (
-        <h1 id="hero-heading">Inventive Africa</h1>
-      )
-    }
-  </section>
+  {hero ? <LeadStory post={hero} /> : null}
 
   {
     secondaryFeatured.length ? (
       <section class="home-section" aria-labelledby="featured-heading">
-        <div class="section-heading">
+        <header class="section-heading">
           <h2 id="featured-heading">Featured stories</h2>
-        </div>
+          <p class="section-heading__hint">Hand-picked from the archive — worth your time right now.</p>
+        </header>
         <div class="home-feature-grid">
           {secondaryFeatured.map((post) => (
             <StoryCard post={post} variant="feature" headingLevel="h3" />
@@ -57,16 +50,16 @@ const spotlightTopics = topics.slice(0, 4);
 
   {
     spotlightTopics.length ? (
-      <section class="home-section home-topics" aria-labelledby="topics-heading">
-        <div class="section-heading">
-          <h2 id="topics-heading">Explore topics</h2>
+      <section class="home-section" aria-labelledby="topics-heading">
+        <header class="section-heading">
+          <h2 id="topics-heading">Explore by topic</h2>
           <a class="section-heading__more" href="/topics/">All topics</a>
-        </div>
+        </header>
         <ul class="topic-grid">
           {spotlightTopics.map((topic) => (
             <li>
               <a class="topic-card" href={`/topic/${topic.slug}/`}>
-                <span class="topic-card__label">{topic.label}</span>
+                <span class="topic-card__label">{formatCategoryLabel(topic.label)}</span>
                 <span class="topic-card__count">{topic.count} stories</span>
               </a>
             </li>
@@ -76,13 +69,13 @@ const spotlightTopics = topics.slice(0, 4);
     ) : null
   }
 
-  <section class="home-section" aria-labelledby="recent-heading">
-    <div class="section-heading">
-      <h2 id="recent-heading">More from the archive</h2>
-      <a class="section-heading__more" href="/articles/">Full archive</a>
-    </div>
+  <section class="home-section" aria-labelledby="archive-heading">
+    <header class="section-heading">
+      <h2 id="archive-heading">More from the archive</h2>
+      <a class="section-heading__more" href="/articles/">Browse all stories</a>
+    </header>
     <div class="home-recent-list">
-      {recent.map((post) => (
+      {archiveHighlights.map((post) => (
         <StoryCard post={post} variant="list" headingLevel="h3" />
       ))}
     </div>
